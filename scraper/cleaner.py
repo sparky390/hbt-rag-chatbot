@@ -4,128 +4,96 @@ from typing import Set, List
 
 INPUT_FOLDER = "data/processed"
 
-# Exact unwanted lines (lowercased for case-insensitive exact matches)
 UNWANTED_EXACT: Set[str] = {
-    "home",
-    "company",
-    "facts & figures",
-    "management",
-    "sustainability",
-    "history",
-    "news",
-    "career",
-    "jobs",
-    "contact",
-    "privacy policy",
-    "cookie policy",
-    "general terms and conditions",
-    "opt-out preferences",
-    "accept",
-    "deny",
-    "view preferences",
-    "save preferences",
-    "manage consent",
-    "manage cookie consent",
-    "skip to content",
+    "home", "company", "facts & figures", "management",
+    "sustainability", "history", "news", "career", "jobs",
+    "contact", "privacy policy", "cookie policy",
+    "general terms and conditions", "opt-out preferences",
+    "accept", "deny", "view preferences", "save preferences",
+    "manage consent", "manage cookie consent", "skip to content",
+    "click here", "read more", "learn more", "view all",
+    "technology", "services",
 }
 
-# Short-line substrings that indicate navigation/consent lines.
-# These are applied only for relatively short lines to avoid removing
-# legitimate longer paragraphs that mention these words.
-UNWANTED_SUBSTRINGS: List[str] = [
-    "cookie",
-    "consent",
-    "privacy",
-    "terms",
-    "opt-out",
-    "preferences",
-    "accept",
-    "deny",
-    "manage",
-    "save",
+ALWAYS_NOISE_RE = re.compile(
+    r"^(click here|read more|learn more|>+|»|←|→|·)$"
+    r"|^(copyright|©)\s*\d{4}"
+    r"|^https?://"
+    r"|^\d+\s*[+%]?$"
+    r"|^•\s*$",
+    re.IGNORECASE,
+)
+
+SHORT_LINE_NOISE: List[str] = [
+    "cookie", "consent", "opt-out", "manage cookie",
+    "save preferences", "gdpr",
 ]
 
 
-def should_drop_line(line: str) -> bool:
-    """Decide whether to drop a line.
-
-    - Exact (case-insensitive) matches are dropped.
-    - Short lines (<= 60 chars) containing any unwanted substring are dropped.
-    """
+def should_drop(line: str) -> bool:
     low = line.lower().strip()
     if not low:
         return False
-
     if low in UNWANTED_EXACT:
         return True
-
     if low.startswith("products"):
         return True
-
-    # Only apply substring matching to short lines
+    if ALWAYS_NOISE_RE.search(low):
+        return True
     if len(low) <= 120:
-        for sub in UNWANTED_SUBSTRINGS:
+        for sub in SHORT_LINE_NOISE:
             if sub in low:
                 return True
-
     return False
 
 
-def clean_file(path: str) -> None:
+def clean_file(path: str) -> int:
     with open(path, "r", encoding="utf-8") as f:
         text = f.read()
 
     lines = text.splitlines()
-
-    cleaned_lines: List[str] = []
+    cleaned: List[str] = []
     prev_blank = False
 
     for line in lines:
         stripped = line.strip()
-
-        # Preserve a single blank line between paragraphs
         if not stripped:
             if not prev_blank:
-                cleaned_lines.append("")
+                cleaned.append("")
                 prev_blank = True
             continue
-
-        if should_drop_line(stripped):
+        if should_drop(stripped):
+            prev_blank = False
             continue
-
-        cleaned_lines.append(stripped)
+        cleaned.append(stripped)
         prev_blank = False
 
-    text = "\n".join(cleaned_lines).strip()
-
-    # Normalize multiple blank lines to a single blank line
-    text = re.sub(r"\n{2,}", "\n\n", text)
-
-    # Normalize multiple spaces/tabs
-    text = re.sub(r"[ \t]+", " ", text)
+    result = "\n".join(cleaned).strip()
+    result = re.sub(r"\n{3,}", "\n\n", result)
+    result = re.sub(r"[ \t]+", " ", result)
 
     with open(path, "w", encoding="utf-8") as f:
-        f.write(text + "\n")
+        f.write(result + "\n")
+
+    return len(result.split())
 
 
-def main() -> None:
+def main():
     if not os.path.isdir(INPUT_FOLDER):
-        print(f"Input folder not found: {INPUT_FOLDER}")
+        print(f"Folder not found: {INPUT_FOLDER}")
         return
 
-    for filename in os.listdir(INPUT_FOLDER):
+    for filename in sorted(os.listdir(INPUT_FOLDER)):
         if not filename.endswith(".txt"):
             continue
-
         path = os.path.join(INPUT_FOLDER, filename)
-
         try:
-            clean_file(path)
-            print(f"Cleaned: {filename}")
+            words = clean_file(path)
+            print(f"  ✓ {words:>5} words → {filename}")
         except Exception as e:
-            print(f"Failed to clean {filename}: {e}")
+            print(f"  ✗ Failed {filename}: {e}")
 
-    print("\nCleaning completed successfully!")
+    print("\nCleaning complete!")
 
 
 if __name__ == "__main__":
