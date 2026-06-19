@@ -47,12 +47,12 @@
     {
         "source": "data_as_a_service_daas___hbt_global_sales_and_support.txt",
         "chunk_id": 1,
-        "content": "Make your data work for you with rich visuals and real-time dashboards!\nEnd-to-end Dashboard solutions for smarter, data-driven decisions\nOptimize data management and cut costs with our Data analytic solutions\nEnable your team with intuitive self-service dashboard for better insights\nWhy Data analytics dashboards?\nConvert data jargons into insightful interactive dashboard form.\nArchitecture - How Data transforms to Dashboard\nDATA PREPARATION\nTRANSFORMATION\nVISUALIZATION\nBUSINESS USER"
+        "content": "Make your data work for you with rich visuals and real-time dashboards!\nEnd-to-end Dashboard solutions for smarter, data-driven decisions\nEnable your team with intuitive self-service dashboard for better insights\nWhy Data analytics dashboards?\nConvert data jargons into insightful interactive dashboard form.\nArchitecture - How Data transforms to Dashboard\nDATA PREPARATION\nTRANSFORMATION\nVISUALIZATION\nBUSINESS USER\nIndustries we Serve\nManufacturing\nTransportation & Logistics\nHealthcare"
     },
     {
         "source": "data_as_a_service_daas___hbt_global_sales_and_support.txt",
         "chunk_id": 2,
-        "content": "TRANSFORMATION\nVISUALIZATION\nBUSINESS USER\nIndustries we Serve\nManufacturing\nTransportation & Logistics\nHealthcare\nRetail & eCommerce\nBanking & Financial Services\nEducation\nHow can we help you?\nDo you have questions about our services? Do you need an individual offer or would you like to request a non-binding consultation?\nPlease feel free to contact us."
+        "content": "Transportation & Logistics\nHealthcare\nRetail & eCommerce\nBanking & Financial Services\nEducation\nHow can we help you?\nDo you have questions about our services? Do you need an individual offer or would you like to request a non-binding consultation?\nPlease feel free to contact us."
     },
     {
         "source": "engineering_services___hbt_global_sales_and_support.txt",
@@ -107,27 +107,27 @@
     {
         "source": "strategic_product_support___hbt_global_sales_and_support.txt",
         "chunk_id": 1,
-        "content": "Our teams support global OEM operations through services including:\nSpare parts pricing and inventory optimization\nWarranty and product health analysis\nTechnical documentation and publications\nSAP-enabled product support operations\nThese capabilities ensure higher equipment availability, better lifecycle profitability, and improved customer satisfaction.\nPRODUCT SUPPORT\nAftermarket Strategy\nLIFE CYCLE MANAGING\nData Mining & Analytics\nTECH DOCUMENTATION\nSTRATEGIC SOURCING"
+        "content": "Our teams support global OEM operations through services including:\nSpare parts pricing and inventory optimization\nWarranty and product health analysis\nTechnical documentation and publications\nSAP-enabled product support operations\nThese capabilities ensure higher equipment availability, better lifecycle profitability, and improved customer satisfaction.\nPRODUCT SUPPORT\nAftermarket Strategy\nLIFE CYCLE MANAGING\nData Mining & Analytics\nTECH DOCUMENTATION\nSTRATEGIC SOURCING\nServices include:"
     },
     {
         "source": "strategic_product_support___hbt_global_sales_and_support.txt",
         "chunk_id": 2,
-        "content": "TECH DOCUMENTATION\nSTRATEGIC SOURCING\nManage the entire lifecycle of industrial equipment and components, ensuring long-term serviceability and performance.\nServices include:\nSpare parts lifecycle planning\nProduct lifecycle analytics\nSpare Parts Pricing & Commercial Support\nEnable structured and data-driven aftermarket pricing frameworks.\nServices include:\nGlobal parts pricing strategy\nMargin governance frameworks\nCost-based pricing analysis\nMarket competitiveness analysis"
+        "content": "STRATEGIC SOURCING\nServices include:\nSpare parts lifecycle planning\nProduct lifecycle analytics\nSpare Parts Pricing & Commercial Support\nEnable structured and data-driven aftermarket pricing frameworks.\nServices include:\nGlobal parts pricing strategy\nMargin governance frameworks\nCost-based pricing analysis\nMarket competitiveness analysis\nEnsure spare parts availability while optimizing inventory costs.\nServices include:\nInventory optimization\nServiceability analysis"
     },
     {
         "source": "strategic_product_support___hbt_global_sales_and_support.txt",
         "chunk_id": 3,
-        "content": "Market competitiveness analysis\nEnsure spare parts availability while optimizing inventory costs.\nServices include:\nInventory optimization\nServiceability analysis\nStock availability monitoring\nSpare parts demand analysis\nWarranty & Product Health Analytics\nImprove product reliability and reduce lifecycle costs.\nServices include:\nWarranty analytics and root cause identification\nProduct performance monitoring\nFailure trend analysis\nReliability improvement recommendations"
+        "content": "Inventory optimization\nServiceability analysis\nStock availability monitoring\nSpare parts demand analysis\nWarranty & Product Health Analytics\nImprove product reliability and reduce lifecycle costs.\nServices include:\nWarranty analytics and root cause identification\nProduct performance monitoring\nFailure trend analysis\nReliability improvement recommendations\nSAP & Digital Product Support\nLeverage enterprise systems to enable structured product support operations.\nServices include:"
     },
     {
         "source": "strategic_product_support___hbt_global_sales_and_support.txt",
         "chunk_id": 4,
-        "content": "Reliability improvement recommendations\nSAP & Digital Product Support\nLeverage enterprise systems to enable structured product support operations.\nServices include:\nPricing dashboard development\nProduct support analytics\nProduct Lifecycle Support Model\nDesign Support\nEngineering documentation\nServiceability analysis\nSpare parts definition\nProduction Support\nTechnical documentation\nSystem integration support\nAftermarket Support\nParts pricing\nWarranty analysis\nLifecycle Optimization"
+        "content": "Services include:\nPricing dashboard development\nProduct support analytics\nProduct Lifecycle Support Model\nDesign Support\nEngineering documentation\nServiceability analysis\nSpare parts definition\nProduction Support\nTechnical documentation\nSystem integration support\nAftermarket Support\nParts pricing\nWarranty analysis\nLifecycle Optimization\nProduct health analytics\nCost optimization\nLifecycle strategy improvement\nTools & Platforms We Use\nHow can we help you?"
     },
     {
         "source": "strategic_product_support___hbt_global_sales_and_support.txt",
         "chunk_id": 5,
-        "content": "Warranty analysis\nLifecycle Optimization\nProduct health analytics\nCost optimization\nLifecycle strategy improvement\nTools & Platforms We Use\nHow can we help you?\nDo you have questions about our services? Do you need an individual offer or would you like to request a non-binding consultation?\nPlease feel free to contact us."
+        "content": "Tools & Platforms We Use\nHow can we help you?\nDo you have questions about our services? Do you need an individual offer or would you like to request a non-binding consultation?\nPlease feel free to contact us."
     },
     {
         "source": "strategic_sourcing___hbt_global_sales_and_support.txt",
@@ -147,37 +147,32 @@
     {
         "source": "strategic_sourcing___hbt_global_sales_and_support.txt",
         "chunk_id": 3,
-        "content": "Quality & Compliance Assurance\nEnsure suppliers meet international quality and regulatory requirements.\nEnd-to-End Supply Chain Execution\nFrom RFQ to delivery, we manage sourcing operations to ensure OTIF delivery and risk mitigation.\nOur Strategic Sourcing Capabilities\nFeasibility Study\nTechnical review\nSupplier capability assessment\nCost benchmarking\nRisk evaluation\nOutcome:\nGo / No-Go sourcing decision\nRFQ & Commercial Alignment\nSupplier comparison\nTCO analysis\nCommercial negotiation"
+        "content": "Quality & Compliance Assurance\nEnsure suppliers meet international quality and regulatory requirements.\nEnd-to-End Supply Chain Execution\nOur Strategic Sourcing Capabilities\nFeasibility Study\nTechnical review\nSupplier capability assessment\nCost benchmarking\nRisk evaluation\nOutcome:\nGo / No-Go sourcing decision\nRFQ & Commercial Alignment\nSupplier comparison\nTCO analysis\nCommercial negotiation\nOutcome:\nOptimized sourcing decision\nProduct Development & Validation\nEngineering collaboration"
     },
     {
         "source": "strategic_sourcing___hbt_global_sales_and_support.txt",
         "chunk_id": 4,
-        "content": "TCO analysis\nCommercial negotiation\nOutcome:\nOptimized sourcing decision\nProduct Development & Validation\nEngineering collaboration\nSample development\nPrototype validation\nDesign optimization\nOutcome:\nProduction-ready component\nQuality & Compliance\nAPQP / PPAP\nProcess validation\nQuality documentation\nFirst article inspection\nOutcome:\nProduction readiness assurance\nThird-Party Inspection\nPre-dispatch inspection\nCompliance verification\nShipment approval\nOutcome:\nRisk-mitigated delivery"
+        "content": "Engineering collaboration\nSample development\nPrototype validation\nDesign optimization\nOutcome:\nProduction-ready component\nQuality & Compliance\nAPQP / PPAP\nProcess validation\nQuality documentation\nFirst article inspection\nOutcome:\nProduction readiness assurance\nThird-Party Inspection\nPre-dispatch inspection\nCompliance verification\nShipment approval\nOutcome:\nRisk-mitigated delivery\nSupply Chain Execution\nProduction tracking\nInventory coordination\nExport documentation\nOutcome:\nOn-time delivery"
     },
     {
         "source": "strategic_sourcing___hbt_global_sales_and_support.txt",
         "chunk_id": 5,
-        "content": "Outcome:\nRisk-mitigated delivery\nSupply Chain Execution\nProduction tracking\nInventory coordination\nExport documentation\nOutcome:\nOn-time delivery\nContinuous Supply Performance\nSupplier performance monitoring\nCost optimization review\nContinuous improvement\nOutcome:\nSustained supply reliability\n1. Feasibility Study\n2. RFQ & Commercial Alignment\n3. Product Development & Validation\n4. Quality & Compliance\n5. Third-Party Inspection\n6. Supply Chain Execution\n7. Continuous Supply Performance"
+        "content": "Export documentation\nOutcome:\nOn-time delivery\nContinuous Supply Performance\nSupplier performance monitoring\nCost optimization review\nContinuous improvement\nOutcome:\nSustained supply reliability\n1. Feasibility Study\n2. RFQ & Commercial Alignment\n3. Product Development & Validation\n4. Quality & Compliance\n5. Third-Party Inspection\n6. Supply Chain Execution\n7. Continuous Supply Performance\nMulti-Commodity Industrial Sourcing Expertise\nIndustrial Fabrication & Machining\nCNC turning & machining"
     },
     {
         "source": "strategic_sourcing___hbt_global_sales_and_support.txt",
         "chunk_id": 6,
-        "content": "7. Continuous Supply Performance\nMulti-Commodity Industrial Sourcing Expertise\nIndustrial Fabrication & Machining\nCNC turning & machining\nLaser cutting\nPrecision fabrication\nCasting & forging\nStamping\nHydraulic Systems\nHydraulic cylinders\nHydraulic valves\nConnectors & end caps\nHose assemblies\nMining Equipment Components\nShearer drums\nAugers\nBuckets\nWork tools\nElectrical & Automation Components\nControl panels\nWiring harness\nSensors\nPLC integration\nOur Supplier Ecosystem\nStrong Global"
+        "content": "CNC turning & machining\nLaser cutting\nPrecision fabrication\nCasting & forging\nStamping\nHydraulic Systems\nHydraulic cylinders\nHydraulic valves\nConnectors & end caps\nHose assemblies\nMining Equipment Components\nShearer drums\nAugers\nBuckets\nWork tools\nElectrical & Automation Components\nControl panels\nWiring harness\nSensors\nPLC integration\nOur Supplier Ecosystem\nStrong Global\nSupplier Network\n150+ qualified suppliers\nMulti-commodity manufacturing capabilities\nGlobal quality compliance"
     },
     {
         "source": "strategic_sourcing___hbt_global_sales_and_support.txt",
         "chunk_id": 7,
-        "content": "Our Supplier Ecosystem\nStrong Global\nSupplier Network\n150+ qualified suppliers\nMulti-commodity manufacturing capabilities\nGlobal quality compliance\nLong-term supplier partnerships\nKey\nCapabilities\nCasting & forging\nPrecision machining\nFabrication & welding\nAutomation assemblies\nWHY HBT INDIA?\nEngineering Excellence. Strategic Sourcing. Proven Results.\nThe Vibrant Team\nStrong Product Expert + Industry Experience\nExperienced Engineering & Sourcing professionals"
+        "content": "Global quality compliance\nLong-term supplier partnerships\nKey\nCapabilities\nCasting & forging\nPrecision machining\nFabrication & welding\nAutomation assemblies\nWHY HBT INDIA?\nEngineering Excellence. Strategic Sourcing. Proven Results.\nThe Vibrant Team\nStrong Product Expert + Industry Experience\nExperienced Engineering & Sourcing professionals\nGlobal quality & manufacturing compliance\nMulti-Commodity Expertise\nEnd-to-End Capability\nSupplier identification --> final delivery ownership"
     },
     {
         "source": "strategic_sourcing___hbt_global_sales_and_support.txt",
         "chunk_id": 8,
-        "content": "Experienced Engineering & Sourcing professionals\nGlobal quality & manufacturing compliance\nMulti-Commodity Expertise\nEnd-to-End Capability\nSupplier identification --> final delivery ownership\nCost Localization Strategy & Process\nPowerful Supplier Eco System\n150+ qualified supplier network\nApproved Supplier Network\nStrong vendor partnerships\nScalable & sustainable manufacturing\nProjects delivered\n0\n+\nCost Saving opportunity\n30-\n30\n%\nSavings Generated\n0\nM\nHow can we help you?"
-    },
-    {
-        "source": "strategic_sourcing___hbt_global_sales_and_support.txt",
-        "chunk_id": 9,
-        "content": "30\n%\nSavings Generated\n0\nM\nHow can we help you?\nDo you have questions about our services? Do you need an individual offer or would you like to request a non-binding consultation?\nPlease feel free to contact us."
+        "content": "Cost Localization Strategy & Process\nPowerful Supplier Eco System\n150+ qualified supplier network\nApproved Supplier Network\nStrong vendor partnerships\nScalable & sustainable manufacturing\nProjects delivered\n0\n+\nCost Saving opportunity\n30-\n30\n%\nSavings Generated\n0\nM\nHow can we help you?\nDo you have questions about our services? Do you need an individual offer or would you like to request a non-binding consultation?\nPlease feel free to contact us."
     },
     {
         "source": "technology_services___hbt_global_sales_and_support.txt",

@@ -59,8 +59,11 @@ def should_drop_line(line: str) -> bool:
     if low in UNWANTED_EXACT:
         return True
 
+    if low.startswith("products"):
+        return True
+
     # Only apply substring matching to short lines
-    if len(low) <= 60:
+    if len(low) <= 120:
         for sub in UNWANTED_SUBSTRINGS:
             if sub in low:
                 return True

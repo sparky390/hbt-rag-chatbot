@@ -18,7 +18,6 @@ LIFE CYCLE MANAGING
 Data Mining & Analytics
 TECH DOCUMENTATION
 STRATEGIC SOURCING
-Manage the entire lifecycle of industrial equipment and components, ensuring long-term serviceability and performance.
 Services include:
 Spare parts lifecycle planning
 Product lifecycle analytics

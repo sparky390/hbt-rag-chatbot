@@ -18,7 +18,7 @@ collection = client.get_collection(
 
 def retrieve_context(
     question,
-    top_k=3
+    top_k=5
 ):
 
     question_embedding = model.encode(

@@ -5,8 +5,11 @@ def ask_question(question):
 
     results = retrieve_context(
         question,
-        top_k=3
+        top_k=2
     )
+
+    if not results["documents"][0]:
+        return "I could not find relevant information in the knowledge base."
 
     context = "\n\n".join(
         results["documents"][0]
@@ -15,18 +18,27 @@ def ask_question(question):
     prompt = f"""
 You are an AI Knowledge Assistant for HBT.
 
-Answer ONLY using the context below.
+Use ONLY the provided context.
 
-Context:
+When answering:
+- Summarize clearly.
+- Use bullet points when listing services.
+- Ignore navigation menus and website boilerplate.
+- Do not use outside knowledge.
+
+If the answer is not present in the context, reply exactly:
+
+I could not find relevant information in the knowledge base.
+
+CONTEXT:
 {context}
 
-Question:
+QUESTION:
 {question}
 
-If the answer is not available in the context,
-say:
-
-"I could not find relevant information in the knowledge base."
+ANSWER:
 """
 
-    return generate_response(prompt)
+    answer = generate_response(prompt)
+
+    return answer
