@@ -1,57 +1,47 @@
-Advancing Industry
-Through Innovation and Execution
-Technology
-Services
-Click here
-HBT Technology Services
+### Advancing Industry Through Innovation and Execution
+
+### Technology Services
+
+## HBT Technology Services
 HBT combines deep engineering expertise, industrial automation excellence, and data-driven innovation to help organizations build smarter, more efficient, and future-ready operations. We deliver end-to-end capabilities—from product engineering and embedded software to automation, data services, and lifecycle support—under one trusted partner.
 Our approach blends real-world industry experience with scalable digital solutions to accelerate time-to-market and reduce operational risk. With a strong focus on quality, reliability, and long-term value creation, we help businesses optimize performance across the entire product and operational lifecycle. HBT is committed to delivering measurable impact, global standards, and sustainable growth for our customers.
-Our Services will be as Mentioned Below
-Data as a Service
-(DaaS)
+
+### Our Services will be as Mentioned Below
+
+#### Data as a Service (DaaS)
 Unlock the full value of your business data with HBT’s end-to-end data solutions. We help organizations integrate, govern, and transform data into powerful insights that drive faster decisions, operational efficiency, and sustainable growth across the enterprise.
-Click here
-Automation and Software Solutions
+
+#### Automation and Software Solutions
 HBT delivers advanced industrial automation and software solutions that improve productivity, reliability, and operational visibility across modern manufacturing and industrial environments. From embedded software and industrial control systems to validation and automation engineering, we help organizations design, build, and scale intelligent, connected systems.
-Click here
-Strategic
-Sourcing
+
+#### Strategic Sourcing
 Build resilient, cost-efficient supply chains that are ready for tomorrow’s challenges. HBT combines procurement expertise, analytics, and supplier intelligence to optimize sourcing strategies, reduce risks, and improve long-term supplier performance.
-Click here
-Strategic
-Product Suport
+
+#### Strategic Product Suport
 Maximize product value beyond launch with HBT’s comprehensive product support solutions. From CRM optimization to aftermarket and lifecycle services, we help organizations strengthen customer relationships, unlock new revenue streams, and extend product profitability.
-Click here
-Engineering
-Services
+
+#### Engineering Services
 Accelerate innovation with HBT’s scalable engineering capabilities. From concept and design to validation and deployment, we help businesses develop reliable, high-performance products that reach the market faster and perform better.
-Click here
-Tech
-Documentation
+
+#### Tech Documentation
 Empower users and streamline operations with clear, compliant, and globally standardized technical documentation. HBT ensures your products are supported with accurate, structured, and easy-to-understand documentation that enhances usability and reduces operational risk.
-Click here
-Built on engineering powered by intelligence
-Time to data model Deployment less than
-hrs
-0
-User adaptation rate
-engagement per month
-0
-+
-Million USD
-0
-Procurement cost
-0
-%
-Guided leaders
-0
-+
-Countries served
-0
-+
-HBT Engineering
+
+#### Built on engineering powered by intelligence
+
+#### Time to data model Deployment less than
+
+### User adaptation rate
+
+### Engineering Cost saved Per year
+
+### Procurement cost
+
+### Guided leaders
+
+### Countries served
+
+### HBT Engineering
 HBT [Hauhinco Bergbau Technik] subsidiaries and partner offices are strategically located in 15 countries including Australia, United States, China, Germany, India, Russia and headquartered in Luenen, Germany. It is a world class machine manufacturer and fully integrated single solution provider – specializing in systems and equipment for underground coal mining, Tunnelling, High Pressure Pumps, Control Systems, Drives & Motors.
 HBT Engineering Private Limited, India is a company consisting of three primary departments that play a crucial role in supporting the Global HBT Group Business Technology services. These departments include Automation Engineering, Mechanical Engineering and Global Product Support.
-Contact us
-Global
-Customers
+
+### Global Customers

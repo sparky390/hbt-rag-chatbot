@@ -10,25 +10,20 @@ os.makedirs("data/raw", exist_ok=True)
 os.makedirs("data/processed", exist_ok=True)
 os.makedirs("data/metadata", exist_ok=True)
 
+# Only remove by tag name — class-based removal was too aggressive
+# and was deleting Elementor content wrappers along with noise
 NOISE_TAGS = [
     "script", "style", "noscript", "iframe",
     "nav", "header", "footer", "aside", "form",
     "button", "svg", "canvas",
 ]
 
-NOISE_CLASS_PATTERNS = re.compile(
-    r"nav|menu|breadcrumb|header|footer|sidebar|widget|"
-    r"cookie|gdpr|consent|popup|banner|social|share|"
-    r"wp-block-navigation|site-header|site-footer|"
-    r"elementor-location-header|elementor-location-footer",
-    re.IGNORECASE,
-)
-
 TEXT_NOISE_PATTERNS = re.compile(
     r"^(click here|read more|learn more|>|»|←|→|\d+\s*[+%]?)$",
     re.IGNORECASE,
 )
 
+# Elementor page content — HBT site uses this
 CONTENT_SELECTORS = [
     "[data-elementor-type='wp-page']",
     "main#content",
@@ -38,32 +33,41 @@ CONTENT_SELECTORS = [
     "[class*='post-content']",
     "[class*='elementor-section-wrap']",
     "div#content",
+    "div#primary",
+    "div.content",
 ]
 
 
 def remove_noise(soup):
+    """Remove noise tags only — collect first to avoid iterator crash."""
+    to_remove = []
     for tag in soup.find_all(NOISE_TAGS):
-        tag.decompose()
-    for tag in soup.find_all(True):
-        classes = " ".join(tag.get("class", []))
-        tag_id = tag.get("id", "")
-        if NOISE_CLASS_PATTERNS.search(f"{classes} {tag_id}"):
+        to_remove.append(tag)
+    for tag in to_remove:
+        try:
             tag.decompose()
+        except Exception:
+            pass
 
 
 def find_content_zone(soup):
+    """Try semantic selectors, then density scoring."""
     for selector in CONTENT_SELECTORS:
-        zone = soup.select_one(selector)
-        if zone and len(zone.get_text(strip=True).split()) > 30:
-            return zone, selector
+        try:
+            zone = soup.select_one(selector)
+            if zone and len(zone.get_text(strip=True).split()) > 30:
+                return zone, selector
+        except Exception:
+            continue
 
+    # Density scoring: most content words per HTML byte, penalise link-heavy blocks
     best, best_score = None, 0.0
     for tag in soup.find_all(["div", "section"]):
         html_len = len(str(tag))
         if html_len < 300:
             continue
         words = len(tag.get_text().split())
-        if words < 20:
+        if words < 30:
             continue
         links = len(tag.find_all("a"))
         score = (words / html_len) - max(0, links - 5) * 0.05
@@ -74,6 +78,7 @@ def find_content_zone(soup):
 
 
 def extract_clean_text(zone):
+    """Extract structured plain text from content zone."""
     if not zone:
         return ""
 
@@ -120,7 +125,9 @@ for index, url in enumerate(urls):
 
         response = requests.get(
             url, timeout=15,
-            headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+            headers={
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+            }
         )
         response.raise_for_status()
 
@@ -130,15 +137,19 @@ for index, url in enumerate(urls):
         file_name = re.sub(r"[^a-z0-9_]", "_", title.lower())
         file_name = re.sub(r"_+", "_", file_name).strip("_")[:80]
 
+        # Save raw HTML before any modification
         with open(f"data/raw/{file_name}.html", "w", encoding="utf-8") as f:
             f.write(response.text)
 
+        # Remove only tag-based noise, then extract
         remove_noise(soup)
         zone, method = find_content_zone(soup)
         text = extract_clean_text(zone)
 
         if len(text.split()) < 20:
             print(f"  Warning: very little content extracted via '{method}'")
+        else:
+            print(f"  ✓ {len(text.split())} words via '{method}' → {file_name}")
 
         with open(f"data/processed/{file_name}.txt", "w", encoding="utf-8") as f:
             f.write(text)
@@ -153,8 +164,6 @@ for index, url in enumerate(urls):
         }
         with open(f"data/metadata/{file_name}.json", "w", encoding="utf-8") as f:
             json.dump(metadata, f, indent=4, ensure_ascii=False)
-
-        print(f"  ✓ {len(text.split())} words via '{method}' → {file_name}")
 
     except Exception as e:
         print(f"  ✗ Failed: {url} — {e}")

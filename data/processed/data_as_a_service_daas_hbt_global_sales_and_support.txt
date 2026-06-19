@@ -1,28 +1,34 @@
-We empower organization thru data-driven insights
-by unlocking the full potential of data!
-DATA AS A SERVICE
-(DaaS)
-Click here
-Data Analytics Solutions
+### We empower organization thru data-driven insights by unlocking the full potential of data!
+
+### DATA AS A SERVICE (DaaS)
+
+## Data Analytics Solutions
 In today’s data-driven world, business intelligence is key to success. Our Data analytic experts craft tailored solutions that unlock hidden insights, empowering organizations to explore and leverage their data more effectively.
-Make your data work for you with rich visuals and real-time dashboards!
-Make your data work for you with rich visuals and real-time dashboards!
+
+#### Make your data work for you with rich visuals and real-time dashboards!
 End-to-end Dashboard solutions for smarter, data-driven decisions
+Optimize data management and cut costs with our Data analytic solutions
 Enable your team with intuitive self-service dashboard for better insights
-Why Data analytics dashboards?
+
+#### Why Data analytics dashboards?
 Convert data jargons into insightful interactive dashboard form.
-Architecture - How Data transforms to Dashboard
-DATA PREPARATION
-TRANSFORMATION
-VISUALIZATION
-BUSINESS USER
-Industries we Serve
-Manufacturing
-Transportation & Logistics
-Healthcare
-Retail & eCommerce
-Banking & Financial Services
-Education
-How can we help you?
+
+## Architecture - How Data transforms to Dashboard
+
+## Industries we Serve
+
+#### Manufacturing
+
+#### Transportation & Logistics
+
+#### Healthcare
+
+#### Retail & eCommerce
+
+#### Banking & Financial Services
+
+#### Education
+
+#### How can we help you?
 Do you have questions about our services? Do you need an individual offer or would you like to request a non-binding consultation?
 Please feel free to contact us.

@@ -1,0 +1,95 @@
+### Engineering intelligent automation systems — from embedded software to industrial analytics platforms.
+
+### Automation and Software Solutions
+HBT Engineering provides end-to-end automation and industrial software development services for OEMs, industrial equipment manufacturers, and digital manufacturing platforms.
+Our teams support the complete technology stack — from embedded firmware and control systems to industrial software platforms, testing automation, and hardware integration . We help organizations accelerate product development, modernize industrial systems, and deploy reliable automation solutions at scale.
+
+### Our Automation & Software Capabilities
+
+### Firmware & Embedded Software Development
+We develop robust firmware and embedded platforms for industrial devices, controllers, and intelligent systems.
+
+#### Capabilities
+• OS support & BSP development
+• Platform bring-up and hardware integration
+• Device drivers and HAL development
+• Embedded security implementation
+• Functional safety compliance
+• Performance optimization & benchmarking
+
+#### Supported Platforms
+• Linux / Embedded Linux
+• Ubuntu / RTOS platforms
+• Embedded hypervisors
+• Industrial edge devices
+
+### Industrial Software Solutions
+• PLC / HMI / SCADA development
+• Industrial automation software engineering
+• Industrial Ethernet & fieldbus integration
+• Automation system integration
+
+#### Platforms
+• Beckhoff
+• Allen-Bradley
+
+### Desktop & Web Industrial Applications
+• Machine health and system monitoring platforms
+• Simulation tools for engineering systems
+• Human Machine Interfaces (HMI)
+• Machine configuration software
+• Historian and industrial data management
+
+#### Technologies
+• HTML5 / CSS / JavaScript
+• Web application frameworks
+• Industrial visualization platforms
+
+### Validation & Test Automation
+• Hardware-in-Loop (HIL) validation
+• Software-in-Loop (SIL) testing
+• Functional validation
+• System integration testing
+• Unit testing frameworks
+• Automation testing frameworks
+• Automation test frameworks
+
+### Automation Engineering & Hardware
+• Automation architecture design
+• Component selection and lifecycle analysis
+• Electrical schematics & PCB design
+• Functional testing
+• New product design support
+• Altium Designer
+• Industrial CAD systems
+
+## Industries We Support
+
+#### Mining & heavy equipment
+
+#### Industrial machinery
+
+#### Manufacturing automation
+
+#### Automotive systems
+
+#### Energy & infrastructure
+
+#### Industrial IoT platforms
+
+## How We Work With Clients
+• Engineering Services Engagement Models
+• Product Development Support
+• End-to-end engineering support for automation platforms.
+• Technology Integration
+• Integration of embedded systems, PLC platforms, and industrial data systems.
+• Automation Modernization
+• Upgrading legacy control systems and software architectures.
+• Engineering Execution Partner
+• Dedicated engineering teams working with global OEMs and industrial technology companies.
+
+### Our Technology Stack
+
+#### How can we help you?
+Do you have questions about our services? Do you need an individual offer or would you like to request a non-binding consultation?
+Please feel free to contact us.
