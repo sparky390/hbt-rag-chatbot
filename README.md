@@ -18,25 +18,28 @@ Answers are grounded strictly in scraped website content — no hallucinations, 
 
 ## ⚙️ How It Works
 
-1. Scrape the HBT Technology Services website (multiple pages)
-2. Clean HTML and extract structured text with heading paths preserved
-3. Chunk content and generate sentence embeddings
-4. Store vectors in a local ChromaDB database
-5. At query time, embed the question and retrieve top-k similar chunks
-6. Feed retrieved context into a local Ollama LLM
-7. Display the grounded answer with collapsible source citations in Streamlit
+1. **Crawl** — discover all service sub-pages under the HBT Technology Services URL
+2. **Scrape** — download raw HTML and extract structured text with heading hierarchy preserved
+3. **Clean** — strip boilerplate, cookie banners, nav noise, and duplicate lines
+4. **Chunk** — split content into structure-aware chunks with breadcrumb heading paths
+5. **Embed** — generate dense vector embeddings using `all-MiniLM-L6-v2`
+6. **Store** — persist embeddings in a local ChromaDB collection
+7. **Retrieve** — at query time, embed the question and fetch top-k similar chunks
+8. **Generate** — feed retrieved context into Ollama (`gemma3:4b`) with a strict grounding prompt
+9. **Display** — render the answer with collapsible source citations in Streamlit
 
 ---
 
 ## ⚡ Features
 
 - 🏠 Fully local — no OpenAI key, no paid APIs, runs entirely on your machine via Ollama
-- 🌐 Multi-page scraping — crawls the main page and all linked product/service sub-pages
-- 🎯 Grounded answers — explicitly says "I could not find relevant information" instead of hallucinating
+- 🌐 Multi-page scraping — crawls the main page and all 6 linked service sub-pages (7 pages total)
+- 🎯 Grounded answers — explicitly returns *"I could not find relevant information in the knowledge base."* instead of hallucinating
 - 📄 Source citations — every answer shows document title, heading path, source file, and similarity score
 - 💬 Chat history — full conversation memory within a session
 - 🧭 Sample questions sidebar — pre-loaded prompts to explore HBT services instantly
-- 🧩 Modular architecture — scraper, embeddings, vectordb, RAG, LLM, and UI fully separated
+- 🔍 Smart retrieval — enumeration queries (e.g. "list all services") get boosted `service_index` chunks for complete answers
+- 🧩 Modular architecture — crawler, scraper, cleaner, chunker, embedder, retriever, LLM, and UI all in separate modules
 
 ---
 
@@ -45,12 +48,11 @@ Answers are grounded strictly in scraped website content — no hallucinations, 
 | Layer | Tool |
 |---|---|
 | Frontend / UI | [Streamlit](https://streamlit.io) |
-| LLM | [Ollama](https://ollama.com) + Llama 3 (local) |
-| Embeddings | [sentence-transformers](https://www.sbert.net) |
-| Vector Database | [ChromaDB](https://www.trychroma.com) |
-| RAG Orchestration | [LangChain](https://langchain.com) |
+| LLM | [Ollama](https://ollama.com) + `gemma3:4b` (local) |
+| Embeddings | `all-MiniLM-L6-v2` via [sentence-transformers](https://www.sbert.net) |
+| Vector Database | [ChromaDB](https://www.trychroma.com) (cosine similarity, persistent) |
 | Web Scraping | [BeautifulSoup4](https://beautiful-soup-4.readthedocs.io) + requests |
-| Language | Python |
+| Language | Python 3.9+ |
 | Version Control | GitHub |
 
 ---
@@ -59,17 +61,39 @@ Answers are grounded strictly in scraped website content — no hallucinations, 
 
 ```
 hbt-rag-chatbot/
-├── app.py                  # Streamlit entry point
+├── app.py                      # Streamlit entry point
+├── run_pipeline.py             # One-command pipeline runner (scrape → embed)
 ├── requirements.txt
-├── scraper/                # Website crawling and HTML cleaning
-├── data/                   # Raw scraped content (HTML + clean text + metadata)
-├── embeddings/             # Sentence embedding model wrapper
-├── vectordb/               # ChromaDB ingestion and vector querying
-├── chroma_db/              # Persisted vector store (auto-generated, do not delete)
+│
+├── scraper/
+│   ├── crawler.py              # Discovers all service page URLs
+│   ├── scraper.py              # Downloads HTML, extracts + saves text & metadata
+│   └── cleaner.py              # Post-processes text (removes boilerplate, dedup)
+│
+├── embeddings/
+│   ├── chunker.py              # Structure-aware chunking with heading breadcrumbs
+│   └── embedder.py             # Generates embeddings and stores in ChromaDB
+│
 ├── rag/
-│   └── chatbot.py          # Core RAG pipeline: ask_question_detailed()
-├── llm/                    # Ollama LLM interface
-└── ui/                     # Streamlit UI helper components
+│   ├── retriever.py            # Vector search with similarity filtering & source diversity
+│   ├── prompt_builder.py       # Builds grounding prompt; defines NOT_FOUND_MESSAGE
+│   └── chatbot.py              # ask_question_detailed() — main RAG entry point
+│
+├── llm/
+│   └── ollama_client.py        # Calls Ollama chat API (model: gemma3:4b)
+│
+├── vectordb/
+│   └── chroma_manager.py       # ChromaDB client helpers
+│
+├── data/
+│   ├── raw/                    # Raw HTML per page
+│   ├── processed/              # Cleaned plain text per page
+│   ├── metadata/               # JSON metadata per page (URL, word count, etc.)
+│   └── chunks.json             # All chunks before embedding
+│
+├── chroma_db/                  # Persisted ChromaDB vector store (auto-generated)
+└── ui/
+    └── components.py           # Streamlit header/footer helpers
 ```
 
 ---
@@ -79,8 +103,8 @@ hbt-rag-chatbot/
 **Prerequisites:** Python 3.9+, [Ollama](https://ollama.com/download) installed and running
 
 ```bash
-# Pull a local model first
-ollama pull llama3
+# Pull the model used by this project
+ollama pull gemma3:4b
 
 # Clone and install
 git clone https://github.com/sparky390/hbt-rag-chatbot.git
@@ -88,19 +112,30 @@ cd hbt-rag-chatbot
 pip install -r requirements.txt
 ```
 
-**Step 1 — Scrape the HBT website**
+**Option A — Run the full pipeline in one command**
 ```bash
-python -m scraper.scrape
+python run_pipeline.py
 ```
-Crawls https://hbt-group.com/aftermarket-services/technology-services/ and all linked service pages. Saves raw HTML, clean text, and metadata to `data/`.
+This runs crawler → scraper → cleaner → chunker → embedder in sequence, then prints a reminder to launch the app.
 
-**Step 2 — Build the vector store**
+**Option B — Run each step individually**
+
 ```bash
-python -m vectordb.ingest
-```
-Chunks the scraped content, generates embeddings, and persists them to `chroma_db/`.
+# Step 1: Discover and scrape all pages
+python scraper/crawler.py     # see discovered URLs
+python scraper/scraper.py     # download + extract text → data/
 
-**Step 3 — Launch the chatbot**
+# Step 2: Clean extracted text
+python scraper/cleaner.py
+
+# Step 3: Chunk into knowledge base
+python embeddings/chunker.py
+
+# Step 4: Generate embeddings and store in ChromaDB
+python embeddings/embedder.py
+```
+
+**Step 5 — Launch the chatbot**
 ```bash
 streamlit run app.py
 ```
@@ -124,49 +159,57 @@ Open [http://localhost:8501](http://localhost:8501) in your browser.
 ## 🏗️ Architecture
 
 ```
-Website (hbt-group.com)
+Website (hbt-group.com/aftermarket-services/technology-services/)
         ↓
-    Scraper
-  (BeautifulSoup4)
+    crawler.py          — discovers 7 service page URLs
         ↓
-  Text Processing
-  (chunking + cleaning)
+    scraper.py          — downloads HTML, extracts structured text
         ↓
-  Vector Database
-    (ChromaDB)
+    cleaner.py          — removes boilerplate, deduplicates lines
         ↓
-    Retriever
-(sentence-transformers)
+    chunker.py          — splits into heading-aware chunks with breadcrumbs
         ↓
-       LLM
-  (Ollama / Llama 3)
+    embedder.py         — generates embeddings (all-MiniLM-L6-v2) → ChromaDB
         ↓
-  Chat Interface
-   (Streamlit)
+    retriever.py        — cosine similarity search, source diversity filtering
+        ↓
+    ollama_client.py    — grounding prompt → Ollama (gemma3:4b)
+        ↓
+    app.py (Streamlit)  — chat UI with source citations
 ```
 
 ---
 
 ## 🌟 Bonus Features Implemented
 
-- ✅ **Multi-page scraping** — crawls the main page and all product/service sub-pages
-- ✅ **Citation support** — answers show source document, heading path, and similarity score
-- ✅ **Conversation memory** — chat history is retained within a session
-- ✅ **Handle unknown questions** — returns "I could not find relevant information in the knowledge base" instead of hallucinating
+- ✅ **Multi-page scraping** — crawls main page + 6 service sub-pages (7 pages total)
+- ✅ **Citation support** — shows source document, heading breadcrumb, and similarity score per answer
+- ✅ **Conversation memory** — chat history retained within a session
+- ✅ **Handle unknown questions** — returns exact "I could not find relevant information in the knowledge base." message
 
 ---
 
 ## 📝 Assumptions & Challenges
 
 **Assumptions:**
-- Only publicly accessible pages within the HBT website are scraped
-- The Ollama LLM and ChromaDB run fully locally — no internet connection needed after setup
-- The `chroma_db/` folder persists between sessions and should not be deleted
+- Only publicly accessible pages under `hbt-group.com/aftermarket-services/technology-services/` are scraped
+- Ollama and ChromaDB run fully locally — no internet needed after initial model pull and scrape
+- The `chroma_db/` folder persists between sessions; re-running `run_pipeline.py` will rebuild it from scratch
+- The `gemma3:4b` model must be pulled before launching (`ollama pull gemma3:4b`)
 
 **Challenges faced:**
-- Extracting structured content with heading hierarchy from dynamically nested HTML required careful BeautifulSoup parsing
-- Tuning chunk size and overlap to balance retrieval accuracy vs. context length for the local LLM
-- Ensuring the RAG pipeline correctly distinguishes between "no relevant content found" vs. low-confidence answers
+- The HBT site uses Elementor for layout, meaning content is wrapped in deeply nested `div` structures rather than semantic HTML — required content-zone detection via CSS selectors and density scoring fallback
+- Boilerplate (cookie banners, GDPR notices, nav links) is embedded inline in the page body and required a dedicated `cleaner.py` step to strip without removing real content
+- Tuning chunk size (`MAX_CHUNK_CHARS = 1400`) and similarity threshold (`MIN_SIMILARITY = 0.25`) to balance recall vs. precision for the local LLM context window
+- Enumeration queries ("list all services") needed special handling — a `service_index` chunk type and similarity boosting to avoid partial answers
+
+---
+
+## 📝 Notes
+
+- Re-scraping is only needed if HBT updates their website; otherwise `chroma_db/` can be reused as-is
+- `langchain` and `langchain-text-splitters` are listed in `requirements.txt` as dependencies but the RAG pipeline is implemented directly without them
+- The `ui/` folder contains stub helpers; all active UI logic lives in `app.py`
 
 ---
 
