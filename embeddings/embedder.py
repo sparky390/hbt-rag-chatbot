@@ -1,58 +1,39 @@
 import json
 import chromadb
+from sentence_transformers import SentenceTransformer
 
-from sentence_transformers import (
-    SentenceTransformer
-)
-
-# Load chunks
-with open(
-    "data/chunks.json",
-    "r",
-    encoding="utf-8"
-) as f:
-
+with open("data/chunks.json", "r", encoding="utf-8") as f:
     chunks = json.load(f)
 
 print(f"Loaded {len(chunks)} chunks")
 
-# Embedding model
-model = SentenceTransformer(
-    "all-MiniLM-L6-v2"
+model = SentenceTransformer("all-MiniLM-L6-v2")
+
+client = chromadb.PersistentClient(path="chroma_db")
+
+try:
+    client.delete_collection("hbt_knowledge")
+    print("Dropped existing collection")
+except Exception:
+    pass
+
+collection = client.create_collection(
+    name="hbt_knowledge",
+    metadata={"hnsw:space": "cosine"},
 )
 
-# Create ChromaDB
-client = chromadb.PersistentClient(
-    path="chroma_db"
+texts = [c["content"] for c in chunks]
+print("Generating embeddings...")
+embeddings = model.encode(texts, show_progress_bar=True).tolist()
+
+collection.add(
+    ids=[str(i) for i in range(len(chunks))],
+    documents=texts,
+    embeddings=embeddings,
+    metadatas=[
+        {"source": c["source"], "chunk_id": c["chunk_id"]}
+        for c in chunks
+    ],
 )
 
-collection = client.get_or_create_collection(
-    name="hbt_knowledge"
-)
-
-# Store chunks
-for index, chunk in enumerate(chunks):
-
-    embedding = model.encode(
-        chunk["content"]
-    ).tolist()
-
-    collection.add(
-        ids=[str(index)],
-        documents=[
-            chunk["content"]
-        ],
-        embeddings=[
-            embedding
-        ],
-        metadatas=[
-            {
-                "source": chunk["source"],
-                "chunk_id": chunk["chunk_id"]
-            }
-        ]
-    )
-
-print(
-    f"Stored {len(chunks)} chunks in ChromaDB"
-)
+print(f"\n✓ Stored {len(chunks)} chunks in ChromaDB → chroma_db/")
