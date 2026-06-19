@@ -2,6 +2,8 @@ streamlit
 beautifulsoup4
 requests
 langchain
+langchain-text-splitters
+sentence-transformers
 chromadb
 ollama
 pytest
