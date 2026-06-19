@@ -2,38 +2,55 @@ import json
 import chromadb
 from sentence_transformers import SentenceTransformer
 
-with open("data/chunks.json", "r", encoding="utf-8") as f:
-    chunks = json.load(f)
+CHUNKS_FILE = "data/chunks.json"
+CHROMA_PATH = "chroma_db"
+COLLECTION_NAME = "hbt_knowledge"
+EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 
-print(f"Loaded {len(chunks)} chunks")
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
+def main():
+    with open(CHUNKS_FILE, "r", encoding="utf-8") as f:
+        chunks = json.load(f)
 
-client = chromadb.PersistentClient(path="chroma_db")
+    print(f"Loaded {len(chunks)} chunks")
 
-try:
-    client.delete_collection("hbt_knowledge")
-    print("Dropped existing collection")
-except Exception:
-    pass
+    model = SentenceTransformer(EMBEDDING_MODEL)
+    client = chromadb.PersistentClient(path=CHROMA_PATH)
 
-collection = client.create_collection(
-    name="hbt_knowledge",
-    metadata={"hnsw:space": "cosine"},
-)
+    try:
+        client.delete_collection(COLLECTION_NAME)
+        print("Dropped existing collection")
+    except Exception:
+        pass
 
-texts = [c["content"] for c in chunks]
-print("Generating embeddings...")
-embeddings = model.encode(texts, show_progress_bar=True).tolist()
+    collection = client.create_collection(
+        name=COLLECTION_NAME,
+        metadata={"hnsw:space": "cosine"},
+    )
 
-collection.add(
-    ids=[str(i) for i in range(len(chunks))],
-    documents=texts,
-    embeddings=embeddings,
-    metadatas=[
-        {"source": c["source"], "chunk_id": c["chunk_id"]}
-        for c in chunks
-    ],
-)
+    texts = [c["content"] for c in chunks]
+    print("Generating embeddings...")
+    embeddings = model.encode(texts, show_progress_bar=True).tolist()
 
-print(f"\n✓ Stored {len(chunks)} chunks in ChromaDB → chroma_db/")
+    metadatas = []
+    for c in chunks:
+        metadatas.append({
+            "source": c.get("source", ""),
+            "chunk_id": c.get("chunk_id", 0),
+            "heading_path": c.get("heading_path", "") or "",
+            "section_type": c.get("section_type", "content") or "content",
+            "doc_title": c.get("doc_title", "") or "",
+        })
+
+    collection.add(
+        ids=[str(i) for i in range(len(chunks))],
+        documents=texts,
+        embeddings=embeddings,
+        metadatas=metadatas,
+    )
+
+    print(f"\n✓ Stored {len(chunks)} chunks in ChromaDB → {CHROMA_PATH}/")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,44 +1,81 @@
-from rag.retriever import retrieve_context
+from dataclasses import dataclass, field
+from typing import Dict, List
+
+from rag.retriever import retrieve_context, is_enumeration_query
+from rag.prompt_builder import build_context_block, build_prompt, NOT_FOUND_MESSAGE
 from llm.ollama_client import generate_response
 
-def ask_question(question):
+DEFAULT_TOP_K = 5
 
-    results = retrieve_context(
-        question,
-        top_k=2
-    )
 
-    if not results["documents"][0]:
-        return "I could not find relevant information in the knowledge base."
+@dataclass
+class Source:
+    source_file: str
+    doc_title: str
+    heading_path: str
+    similarity: float
 
-    context = "\n\n".join(
-        results["documents"][0]
-    )
 
-    prompt = f"""
-You are an AI Knowledge Assistant for HBT.
+@dataclass
+class AnswerResult:
+    answer: str
+    sources: List[Source] = field(default_factory=list)
+    grounded: bool = True
 
-Use ONLY the provided context.
 
-When answering:
-- Summarize clearly.
-- Use bullet points when listing services.
-- Ignore navigation menus and website boilerplate.
-- Do not use outside knowledge.
+def _humanize_filename(filename: str) -> str:
+    name = filename.replace(".txt", "").replace("_", " ").strip()
+    return name[:1].upper() + name[1:] if name else filename
 
-If the answer is not present in the context, reply exactly:
 
-I could not find relevant information in the knowledge base.
+def _build_sources(metadatas: List[dict], similarities: List[float]) -> List[Source]:
+    sources: List[Source] = []
+    seen = set()
+    for meta, sim in zip(metadatas, similarities):
+        source_file = meta.get("source", "")
+        heading_path = meta.get("heading_path", "")
+        key = (source_file, heading_path)
+        if key in seen:
+            continue
+        seen.add(key)
+        sources.append(Source(
+            source_file=source_file,
+            doc_title=meta.get("doc_title") or _humanize_filename(source_file),
+            heading_path=heading_path,
+            similarity=sim,
+        ))
+    return sources
 
-CONTEXT:
-{context}
 
-QUESTION:
-{question}
+def _assemble_context(documents: List[str], metadatas: List[dict]) -> str:
+    return build_context_block(documents, metadatas)
 
-ANSWER:
-"""
 
-    answer = generate_response(prompt)
+def _looks_like_refusal(answer: str) -> bool:
+    return NOT_FOUND_MESSAGE.lower() in answer.lower()
 
-    return answer
+
+def ask_question(question: str, top_k: int = DEFAULT_TOP_K) -> str:
+    result = ask_question_detailed(question, top_k=top_k)
+    return result.answer
+
+
+def ask_question_detailed(question: str, top_k: int = DEFAULT_TOP_K) -> AnswerResult:
+    enumeration = is_enumeration_query(question)
+    effective_top_k = top_k + 3 if enumeration else top_k
+
+    results = retrieve_context(question, top_k=effective_top_k)
+
+    if not results["documents"]:
+        return AnswerResult(answer=NOT_FOUND_MESSAGE, sources=[], grounded=True)
+
+    context = _assemble_context(results["documents"], results["metadatas"])
+    prompt = build_prompt(question, context, enumeration)
+
+    answer = generate_response(prompt).strip()
+
+    if _looks_like_refusal(answer):
+        return AnswerResult(answer=NOT_FOUND_MESSAGE, sources=[], grounded=True)
+
+    sources = _build_sources(results["metadatas"], results["similarities"])
+    return AnswerResult(answer=answer, sources=sources, grounded=True)
