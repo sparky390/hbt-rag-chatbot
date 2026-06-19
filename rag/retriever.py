@@ -14,4 +14,11 @@ def retrieve_context(question: str, top_k: int = 5):
         n_results=top_k,
         include=["documents", "metadatas", "distances"],
     )
+
+    if not results["distances"] or not results["distances"][0]:
+        return None
+
+    if results["distances"][0][0] > 1.0:
+        return None
+
     return results
