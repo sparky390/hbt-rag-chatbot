@@ -1,342 +1,546 @@
 [
     {
+        "content": "Automation and Software Solutions\nHBT Engineering provides end-to-end automation and industrial software development services for OEMs, industrial equipment manufacturers, and digital manufacturing platforms.\nOur teams support the complete technology stack — from embedded firmware and control systems to industrial software platforms, testing automation, and hardware integration . We help organizations accelerate product development, modernize industrial systems, and deploy reliable automation solutions at scale.",
+        "heading_path": "Automation and Software Solutions",
+        "section_type": "content",
+        "doc_title": "Engineering intelligent automation systems — from embedded software to industrial analytics platforms.",
         "source": "automation_and_software_solutions_hbt_global_sales_and_support.txt",
-        "chunk_id": 0,
-        "content": "### Engineering intelligent automation systems — from embedded software to industrial analytics platforms."
+        "chunk_id": 0
     },
     {
+        "content": "Firmware & Embedded Software Development\nWe develop robust firmware and embedded platforms for industrial devices, controllers, and intelligent systems.",
+        "heading_path": "Firmware & Embedded Software Development",
+        "section_type": "content",
+        "doc_title": "Engineering intelligent automation systems — from embedded software to industrial analytics platforms.",
         "source": "automation_and_software_solutions_hbt_global_sales_and_support.txt",
-        "chunk_id": 1,
-        "content": "### Automation and Software Solutions\nHBT Engineering provides end-to-end automation and industrial software development services for OEMs, industrial equipment manufacturers, and digital manufacturing platforms."
+        "chunk_id": 1
     },
     {
+        "content": "Firmware & Embedded Software Development > Capabilities\n• OS support & BSP development\n• Platform bring-up and hardware integration\n• Device drivers and HAL development\n• Embedded security implementation\n• Functional safety compliance\n• Performance optimization & benchmarking",
+        "heading_path": "Firmware & Embedded Software Development > Capabilities",
+        "section_type": "content",
+        "doc_title": "Engineering intelligent automation systems — from embedded software to industrial analytics platforms.",
         "source": "automation_and_software_solutions_hbt_global_sales_and_support.txt",
-        "chunk_id": 2,
-        "content": "Our teams support the complete technology stack — from embedded firmware and control systems to industrial software platforms, testing automation, and hardware integration . We help organizations accelerate product development, modernize industrial systems, and deploy reliable automation solutions at scale."
+        "chunk_id": 2
     },
     {
+        "content": "Firmware & Embedded Software Development > Supported Platforms\n• Linux / Embedded Linux\n• Ubuntu / RTOS platforms\n• Embedded hypervisors\n• Industrial edge devices",
+        "heading_path": "Firmware & Embedded Software Development > Supported Platforms",
+        "section_type": "content",
+        "doc_title": "Engineering intelligent automation systems — from embedded software to industrial analytics platforms.",
         "source": "automation_and_software_solutions_hbt_global_sales_and_support.txt",
-        "chunk_id": 4,
-        "content": "### Firmware & Embedded Software Development\nWe develop robust firmware and embedded platforms for industrial devices, controllers, and intelligent systems.\n\n#### Capabilities\n• OS support & BSP development\n• Platform bring-up and hardware integration\n• Device drivers and HAL development\n• Embedded security implementation\n• Functional safety compliance\n• Performance optimization & benchmarking"
+        "chunk_id": 3
     },
     {
+        "content": "Industrial Software Solutions\n• PLC / HMI / SCADA development\n• Industrial automation software engineering\n• Industrial Ethernet & fieldbus integration\n• Automation system integration",
+        "heading_path": "Industrial Software Solutions",
+        "section_type": "content",
+        "doc_title": "Engineering intelligent automation systems — from embedded software to industrial analytics platforms.",
         "source": "automation_and_software_solutions_hbt_global_sales_and_support.txt",
-        "chunk_id": 5,
-        "content": "#### Supported Platforms\n• Linux / Embedded Linux\n• Ubuntu / RTOS platforms\n• Embedded hypervisors\n• Industrial edge devices"
+        "chunk_id": 4
     },
     {
+        "content": "Desktop & Web Industrial Applications\n• Machine health and system monitoring platforms\n• Simulation tools for engineering systems\n• Human Machine Interfaces (HMI)\n• Machine configuration software\n• Historian and industrial data management",
+        "heading_path": "Desktop & Web Industrial Applications",
+        "section_type": "content",
+        "doc_title": "Engineering intelligent automation systems — from embedded software to industrial analytics platforms.",
         "source": "automation_and_software_solutions_hbt_global_sales_and_support.txt",
-        "chunk_id": 6,
-        "content": "### Industrial Software Solutions\n• PLC / HMI / SCADA development\n• Industrial automation software engineering\n• Industrial Ethernet & fieldbus integration\n• Automation system integration\n\n#### Platforms\n• Beckhoff\n• Allen-Bradley"
+        "chunk_id": 5
     },
     {
+        "content": "Desktop & Web Industrial Applications > Technologies\n• HTML5 / CSS / JavaScript\n• Web application frameworks\n• Industrial visualization platforms",
+        "heading_path": "Desktop & Web Industrial Applications > Technologies",
+        "section_type": "content",
+        "doc_title": "Engineering intelligent automation systems — from embedded software to industrial analytics platforms.",
         "source": "automation_and_software_solutions_hbt_global_sales_and_support.txt",
-        "chunk_id": 7,
-        "content": "### Desktop & Web Industrial Applications\n• Machine health and system monitoring platforms\n• Simulation tools for engineering systems\n• Human Machine Interfaces (HMI)\n• Machine configuration software\n• Historian and industrial data management\n\n#### Technologies\n• HTML5 / CSS / JavaScript\n• Web application frameworks\n• Industrial visualization platforms"
+        "chunk_id": 6
     },
     {
+        "content": "Validation & Test Automation\n• Hardware-in-Loop (HIL) validation\n• Software-in-Loop (SIL) testing\n• Functional validation\n• System integration testing\n• Unit testing frameworks\n• Automation testing frameworks\n• Automation test frameworks",
+        "heading_path": "Validation & Test Automation",
+        "section_type": "content",
+        "doc_title": "Engineering intelligent automation systems — from embedded software to industrial analytics platforms.",
         "source": "automation_and_software_solutions_hbt_global_sales_and_support.txt",
-        "chunk_id": 8,
-        "content": "### Validation & Test Automation\n• Hardware-in-Loop (HIL) validation\n• Software-in-Loop (SIL) testing\n• Functional validation\n• System integration testing\n• Unit testing frameworks\n• Automation testing frameworks\n• Automation test frameworks\n\n### Automation Engineering & Hardware\n• Automation architecture design\n• Component selection and lifecycle analysis\n• Electrical schematics & PCB design\n• Functional testing\n• New product design support\n• Altium Designer\n• Industrial CAD systems"
+        "chunk_id": 7
     },
     {
+        "content": "Automation Engineering & Hardware\n• Automation architecture design\n• Component selection and lifecycle analysis\n• Electrical schematics & PCB design\n• Functional testing\n• New product design support\n• Altium Designer\n• Industrial CAD systems",
+        "heading_path": "Automation Engineering & Hardware",
+        "section_type": "content",
+        "doc_title": "Engineering intelligent automation systems — from embedded software to industrial analytics platforms.",
         "source": "automation_and_software_solutions_hbt_global_sales_and_support.txt",
-        "chunk_id": 9,
-        "content": "## Industries We Support\n\n#### Mining & heavy equipment\n\n#### Industrial machinery\n\n#### Manufacturing automation\n\n#### Automotive systems\n\n#### Energy & infrastructure\n\n#### Industrial IoT platforms"
+        "chunk_id": 8
     },
     {
+        "content": "How We Work With Clients\n• Engineering Services Engagement Models\n• Product Development Support\n• End-to-end engineering support for automation platforms.\n• Technology Integration\n• Integration of embedded systems, PLC platforms, and industrial data systems.\n• Automation Modernization\n• Upgrading legacy control systems and software architectures.\n• Engineering Execution Partner\n• Dedicated engineering teams working with global OEMs and industrial technology companies.",
+        "heading_path": "How We Work With Clients",
+        "section_type": "content",
+        "doc_title": "Engineering intelligent automation systems — from embedded software to industrial analytics platforms.",
         "source": "automation_and_software_solutions_hbt_global_sales_and_support.txt",
-        "chunk_id": 10,
-        "content": "## How We Work With Clients\n• Engineering Services Engagement Models\n• Product Development Support\n• End-to-end engineering support for automation platforms.\n• Technology Integration\n• Integration of embedded systems, PLC platforms, and industrial data systems.\n• Automation Modernization\n• Upgrading legacy control systems and software architectures.\n• Engineering Execution Partner\n• Dedicated engineering teams working with global OEMs and industrial technology companies."
+        "chunk_id": 9
     },
     {
-        "source": "automation_and_software_solutions_hbt_global_sales_and_support.txt",
-        "chunk_id": 11,
-        "content": "### Our Technology Stack\n\n#### How can we help you?\nDo you have questions about our services? Do you need an individual offer or would you like to request a non-binding consultation?\nPlease feel free to contact us."
-    },
-    {
+        "content": "Data Analytics Solutions\nIn today’s data-driven world, business intelligence is key to success. Our Data analytic experts craft tailored solutions that unlock hidden insights, empowering organizations to explore and leverage their data more effectively.",
+        "heading_path": "Data Analytics Solutions",
+        "section_type": "content",
+        "doc_title": "We empower organization thru data-driven insights by unlocking the full potential of data!",
         "source": "data_as_a_service_daas_hbt_global_sales_and_support.txt",
-        "chunk_id": 0,
-        "content": "### We empower organization thru data-driven insights by unlocking the full potential of data!\n\n### DATA AS A SERVICE (DaaS)"
+        "chunk_id": 0
     },
     {
+        "content": "Data Analytics Solutions > Make your data work for you with rich visuals and real-time dashboards!\nEnd-to-end Dashboard solutions for smarter, data-driven decisions\nOptimize data management and cut costs with our Data analytic solutions\nEnable your team with intuitive self-service dashboard for better insights",
+        "heading_path": "Data Analytics Solutions > Make your data work for you with rich visuals and real-time dashboards!",
+        "section_type": "content",
+        "doc_title": "We empower organization thru data-driven insights by unlocking the full potential of data!",
         "source": "data_as_a_service_daas_hbt_global_sales_and_support.txt",
-        "chunk_id": 1,
-        "content": "## Data Analytics Solutions\nIn today’s data-driven world, business intelligence is key to success. Our Data analytic experts craft tailored solutions that unlock hidden insights, empowering organizations to explore and leverage their data more effectively."
+        "chunk_id": 1
     },
     {
+        "content": "Data Analytics Solutions > Why Data analytics dashboards?\nConvert data jargons into insightful interactive dashboard form.",
+        "heading_path": "Data Analytics Solutions > Why Data analytics dashboards?",
+        "section_type": "content",
+        "doc_title": "We empower organization thru data-driven insights by unlocking the full potential of data!",
         "source": "data_as_a_service_daas_hbt_global_sales_and_support.txt",
-        "chunk_id": 2,
-        "content": "#### Make your data work for you with rich visuals and real-time dashboards!\nEnd-to-end Dashboard solutions for smarter, data-driven decisions\nOptimize data management and cut costs with our Data analytic solutions\nEnable your team with intuitive self-service dashboard for better insights\n\n#### Why Data analytics dashboards?\nConvert data jargons into insightful interactive dashboard form."
+        "chunk_id": 2
     },
     {
-        "source": "data_as_a_service_daas_hbt_global_sales_and_support.txt",
-        "chunk_id": 3,
-        "content": "## Architecture - How Data transforms to Dashboard\n\n## Industries we Serve\n\n#### Manufacturing\n\n#### Transportation & Logistics\n\n#### Healthcare\n\n#### Retail & eCommerce\n\n#### Banking & Financial Services\n\n#### Education\n\n#### How can we help you?\nDo you have questions about our services? Do you need an individual offer or would you like to request a non-binding consultation?\nPlease feel free to contact us."
-    },
-    {
+        "content": "Engineering Services\nHBT Engineering provides comprehensive engineering services supporting the design, development, and validation of complex industrial systems. Our multidisciplinary teams combine expertise across mechanical engineering, hydraulics, gearbox design, electrical systems, system integration, and virtual validation to deliver robust engineering solutions. These services support customers across the entire product lifecycle — from concept design to production readiness. The company’s global engineering expertise is built on nearly 200 years of industrial engineering heritage originating from Luenen, Germany.",
+        "heading_path": "Engineering Services",
+        "section_type": "content",
+        "doc_title": "Engineering Excellence for Industrial Innovation.",
         "source": "engineering_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 2,
-        "content": "HBT Engineering provides comprehensive engineering services supporting the design, development, and validation of complex industrial systems. Our multidisciplinary teams combine expertise across mechanical engineering, hydraulics, gearbox design, electrical systems, system integration, and virtual validation to deliver robust engineering solutions. These services support customers across the entire product lifecycle — from concept design to production readiness"
+        "chunk_id": 0
     },
     {
+        "content": "Structural Engineering\nSupport complex machine structures and system layouts.\nCapabilities\n• Benchmarking and reverse engineering\n• Machine configuration\n• Layout optimization\n• Space claim studies\n• Product customization\n• Stack-up analysis\n• Structural validation\nEngineering Tools",
+        "heading_path": "Structural Engineering",
+        "section_type": "content",
+        "doc_title": "Engineering Excellence for Industrial Innovation.",
         "source": "engineering_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 3,
-        "content": ". The company’s global engineering expertise is built on nearly 200 years of industrial engineering heritage originating from Luenen, Germany."
+        "chunk_id": 1
     },
     {
+        "content": "Structural Engineering > Hydraulic System Engineering\nDesign and optimize hydraulic systems for industrial machinery.\n• Hydraulic circuit design\n• Valve and cylinder design\n• Hydraulic component sizing\n• Hose and pipe routing\n• System troubleshooting and validation\n• Multi-technology circuit analysis",
+        "heading_path": "Structural Engineering > Hydraulic System Engineering",
+        "section_type": "content",
+        "doc_title": "Engineering Excellence for Industrial Innovation.",
         "source": "engineering_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 4,
-        "content": "## Structural Engineering\nSupport complex machine structures and system layouts.\nCapabilities\n• Benchmarking and reverse engineering\n• Machine configuration\n• Layout optimization\n• Space claim studies\n• Product customization\n• Stack-up analysis\n• Structural validation\nEngineering Tools"
+        "chunk_id": 2
     },
     {
+        "content": "Structural Engineering > Gearbox Engineering\nAdvanced gearbox system design and performance optimization.\n• System requirements analysis\n• Gearbox configuration design\n• Casting and shaft system design\n• Shifting mechanism design\n• Cooling and lubrication systems\n• Virtual validation",
+        "heading_path": "Structural Engineering > Gearbox Engineering",
+        "section_type": "content",
+        "doc_title": "Engineering Excellence for Industrial Innovation.",
         "source": "engineering_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 5,
-        "content": "### Hydraulic System Engineering\nDesign and optimize hydraulic systems for industrial machinery.\n• Hydraulic circuit design\n• Valve and cylinder design\n• Hydraulic component sizing\n• Hose and pipe routing\n• System troubleshooting and validation\n• Multi-technology circuit analysis"
+        "chunk_id": 3
     },
     {
+        "content": "Structural Engineering > System Integration Engineering\nIntegration of mechanical, hydraulic, and electrical subsystems into unified product architecture.\n• Machine configuration and system architecture\n• System-level BOM management\n• 2D/3D modeling and visualization\n• Parametric CAD conversion\n• Product FAT support\n• Compliance verification",
+        "heading_path": "Structural Engineering > System Integration Engineering",
+        "section_type": "content",
+        "doc_title": "Engineering Excellence for Industrial Innovation.",
         "source": "engineering_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 6,
-        "content": "### Gearbox Engineering\nAdvanced gearbox system design and performance optimization.\n• System requirements analysis\n• Gearbox configuration design\n• Casting and shaft system design\n• Shifting mechanism design\n• Cooling and lubrication systems\n• Virtual validation"
+        "chunk_id": 4
     },
     {
+        "content": "Structural Engineering > Electrical Engineering\nElectrical system design for industrial equipment.\n• Electrical schematics and BOM\n• Electrical load calculations\n• System packaging\n• Cable routing and harness design\n• Electrical component selection\n• Compliance validation",
+        "heading_path": "Structural Engineering > Electrical Engineering",
+        "section_type": "content",
+        "doc_title": "Engineering Excellence for Industrial Innovation.",
         "source": "engineering_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 7,
-        "content": "### System Integration Engineering\nIntegration of mechanical, hydraulic, and electrical subsystems into unified product architecture.\n• Machine configuration and system architecture\n• System-level BOM management\n• 2D/3D modeling and visualization\n• Parametric CAD conversion\n• Product FAT support\n• Compliance verification"
+        "chunk_id": 5
     },
     {
+        "content": "Virtual Product Development & Engineering Validation\n• Finite Element Analysis (FEA)\n• Virtual product validation\n• Kinematics analysis\n• Mechanical simulation\n• Interference and fitment validation\n• Digital product testing\nThese capabilities help reduce design risks and accelerate product development cycles.",
+        "heading_path": "Virtual Product Development & Engineering Validation",
+        "section_type": "content",
+        "doc_title": "Engineering Excellence for Industrial Innovation.",
         "source": "engineering_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 8,
-        "content": "### Electrical Engineering\nElectrical system design for industrial equipment.\n• Electrical schematics and BOM\n• Electrical load calculations\n• System packaging\n• Cable routing and harness design\n• Electrical component selection\n• Compliance validation"
+        "chunk_id": 6
     },
     {
+        "content": "Engineering Development Process\nThis engineering workflow ensures structured product development and reduced technical risk.",
+        "heading_path": "Engineering Development Process",
+        "section_type": "content",
+        "doc_title": "Engineering Excellence for Industrial Innovation.",
         "source": "engineering_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 9,
-        "content": "## Virtual Product Development & Engineering Validation\n• Finite Element Analysis (FEA)\n• Virtual product validation\n• Kinematics analysis\n• Mechanical simulation\n• Interference and fitment validation\n• Digital product testing\nThese capabilities help reduce design risks and accelerate product development cycles.\n\n## Engineering Development Process\nThis engineering workflow ensures structured product development and reduced technical risk."
+        "chunk_id": 7
     },
     {
+        "content": "Engineering Tools & Platforms > Digital Engineering Platforms\n• MATLAB / Simulink\n• Power BI\n• SAP engineering integration",
+        "heading_path": "Engineering Tools & Platforms > Digital Engineering Platforms",
+        "section_type": "content",
+        "doc_title": "Engineering Excellence for Industrial Innovation.",
         "source": "engineering_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 10,
-        "content": "## Engineering Tools & Platforms\n\n### CAD& Mechanical Engineering\n• Inventor\n• Windchill\n• Teamcenter\n\n### Simulation & Analysis\n• Stack-up analysis tools\n• Fastener analysis\n\n### Electrical & Automation\n• Automation Studio\n• PLC / Codesys\n\n### Digital Engineering Platforms\n• MATLAB / Simulink\n• Power BI\n• SAP engineering integration"
+        "chunk_id": 8
     },
     {
-        "source": "engineering_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 11,
-        "content": "## Industries Supported\n\n#### Mining Equipment\n\n#### Industrial Machinery\n\n#### Hydraulics\n\n#### Heavy Engineering\n\n#### Automation Systems\n\n#### Energy Equipment\n\n#### How can we help you?\nDo you have questions about our services? Do you need an individual offer or would you like to request a non-binding consultation?\nPlease feel free to contact us."
-    },
-    {
+        "content": "Engineering-Driven Strategic Sourcing\nModern industrial equipment requires long lifecycle support, reliable spare parts management, and engineering continuity across multiple global locations.\nAt HBT Engineering India, our Product Support Services combine engineering expertise, data-driven decision making, and supply chain coordination to ensure seamless lifecycle support for complex industrial systems.\nOur teams support global OEM operations through services including:\n• Aftermarket lifecycle management\n• Spare parts pricing and inventory optimization\n• Warranty and product health analysis\n• Technical documentation and publications\n• SAP-enabled product support operations\nThese capabilities ensure higher equipment availability, better lifecycle profitability, and improved customer satisfaction.\nManage the entire lifecycle of industrial equipment and components, ensuring long-term serviceability and performance.\nServices include:\n• Installed base lifecycle management\n• Spare parts lifecycle planning\n• Obsolescence management\n• Product lifecycle analytics",
+        "heading_path": "Engineering-Driven Strategic Sourcing",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Lifecycle Support",
         "source": "strategic_product_support_hbt_global_sales_and_support.txt",
-        "chunk_id": 1,
-        "content": "## Engineering-Driven Strategic Sourcing\nModern industrial equipment requires long lifecycle support, reliable spare parts management, and engineering continuity across multiple global locations.\nAt HBT Engineering India, our Product Support Services combine engineering expertise, data-driven decision making, and supply chain coordination to ensure seamless lifecycle support for complex industrial systems.\nOur teams support global OEM operations through services including:"
+        "chunk_id": 0
     },
     {
+        "content": "Engineering-Driven Strategic Sourcing > Spare Parts Pricing & Commercial Support\nEnable structured and data-driven aftermarket pricing frameworks.\n• Global parts pricing strategy\n• Margin governance frameworks\n• Cost-based pricing analysis\n• Market competitiveness analysis",
+        "heading_path": "Engineering-Driven Strategic Sourcing > Spare Parts Pricing & Commercial Support",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Lifecycle Support",
         "source": "strategic_product_support_hbt_global_sales_and_support.txt",
-        "chunk_id": 2,
-        "content": "Our teams support global OEM operations through services including:\n• Aftermarket lifecycle management\n• Spare parts pricing and inventory optimization\n• Warranty and product health analysis\n• Technical documentation and publications\n• SAP-enabled product support operations\nThese capabilities ensure higher equipment availability, better lifecycle profitability, and improved customer satisfaction."
+        "chunk_id": 1
     },
     {
+        "content": "Engineering-Driven Strategic Sourcing > Inventory & Serviceability Management\nEnsure spare parts availability while optimizing inventory costs.\n• Inventory optimization\n• Serviceability analysis\n• Stock availability monitoring\n• Spare parts demand analysis",
+        "heading_path": "Engineering-Driven Strategic Sourcing > Inventory & Serviceability Management",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Lifecycle Support",
         "source": "strategic_product_support_hbt_global_sales_and_support.txt",
-        "chunk_id": 3,
-        "content": "Manage the entire lifecycle of industrial equipment and components, ensuring long-term serviceability and performance.\nServices include:\n• Installed base lifecycle management\n• Spare parts lifecycle planning\n• Obsolescence management\n• Product lifecycle analytics"
+        "chunk_id": 2
     },
     {
+        "content": "Engineering-Driven Strategic Sourcing > Warranty & Product Health Analytics\nImprove product reliability and reduce lifecycle costs.\n• Warranty analytics and root cause identification\n• Product performance monitoring\n• Failure trend analysis\n• Reliability improvement recommendations",
+        "heading_path": "Engineering-Driven Strategic Sourcing > Warranty & Product Health Analytics",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Lifecycle Support",
         "source": "strategic_product_support_hbt_global_sales_and_support.txt",
-        "chunk_id": 4,
-        "content": "### Spare Parts Pricing & Commercial Support\nEnable structured and data-driven aftermarket pricing frameworks.\n• Global parts pricing strategy\n• Margin governance frameworks\n• Cost-based pricing analysis\n• Market competitiveness analysis\n\n### Inventory & Serviceability Management\nEnsure spare parts availability while optimizing inventory costs.\n• Inventory optimization\n• Serviceability analysis\n• Stock availability monitoring\n• Spare parts demand analysis"
+        "chunk_id": 3
     },
     {
+        "content": "Engineering-Driven Strategic Sourcing > SAP & Digital Product Support\nLeverage enterprise systems to enable structured product support operations.\n• SAP product master data management\n• Parts database management\n• Pricing dashboard development\n• Product support analytics",
+        "heading_path": "Engineering-Driven Strategic Sourcing > SAP & Digital Product Support",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Lifecycle Support",
         "source": "strategic_product_support_hbt_global_sales_and_support.txt",
-        "chunk_id": 5,
-        "content": "### Warranty & Product Health Analytics\nImprove product reliability and reduce lifecycle costs.\n• Warranty analytics and root cause identification\n• Product performance monitoring\n• Failure trend analysis\n• Reliability improvement recommendations\n\n### SAP & Digital Product Support\nLeverage enterprise systems to enable structured product support operations.\n• SAP product master data management\n• Parts database management\n• Pricing dashboard development\n• Product support analytics"
+        "chunk_id": 4
     },
     {
+        "content": "Product Lifecycle Support Model\n• Engineering documentation\n• Spare parts definition\n• BOM management\n• Technical documentation\n• System integration support\n• Parts pricing\n• Inventory management\n• Warranty analysis\n• Product health analytics\n• Cost optimization\n• Lifecycle strategy improvement",
+        "heading_path": "Product Lifecycle Support Model",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Lifecycle Support",
         "source": "strategic_product_support_hbt_global_sales_and_support.txt",
-        "chunk_id": 6,
-        "content": "## Product Lifecycle Support Model\n• Engineering documentation\n• Spare parts definition\n• BOM management\n• Technical documentation\n• System integration support\n• Parts pricing\n• Inventory management\n• Warranty analysis\n• Product health analytics\n• Cost optimization\n• Lifecycle strategy improvement"
+        "chunk_id": 5
     },
     {
-        "source": "strategic_product_support_hbt_global_sales_and_support.txt",
-        "chunk_id": 7,
-        "content": "## Tools & Platforms We Use\n\n#### How can we help you?\nDo you have questions about our services? Do you need an individual offer or would you like to request a non-binding consultation?\nPlease feel free to contact us."
-    },
-    {
+        "content": "Strategic sourcing\nAt HBT Engineering India, strategic sourcing goes beyond supplier discovery. We combine engineering expertise, supplier intelligence, and end-to-end execution ownership to build resilient and cost-efficient supply chains for complex industrial components.\nWith nearly 200 years of industrial heritage originating from Luenen, Germany, HBT brings deep manufacturing expertise and applies it to modern global sourcing strategies.\nOur sourcing teams work closely with global customers to support:\n• Cost localization initiatives\n• Supplier capability assessment\n• Engineering collaboration for manufacturability\n• End-to-end procurement execution",
+        "heading_path": "Strategic sourcing",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Strategic Sourcing",
         "source": "strategic_sourcing_hbt_global_sales_and_support.txt",
-        "chunk_id": 1,
-        "content": "### Strategic sourcing\nAt HBT Engineering India, strategic sourcing goes beyond supplier discovery. We combine engineering expertise, supplier intelligence, and end-to-end execution ownership to build resilient and cost-efficient supply chains for complex industrial components.\nWith nearly 200 years of industrial heritage originating from Luenen, Germany, HBT brings deep manufacturing expertise and applies it to modern global sourcing strategies."
+        "chunk_id": 0
     },
     {
+        "content": "Our Strategic Sourcing Capabilities > Supplier Discovery & Capability Assessment\nIdentify and qualify suppliers based on technical capability, quality systems, and manufacturing readiness.",
+        "heading_path": "Our Strategic Sourcing Capabilities > Supplier Discovery & Capability Assessment",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Strategic Sourcing",
         "source": "strategic_sourcing_hbt_global_sales_and_support.txt",
-        "chunk_id": 2,
-        "content": "Our sourcing teams work closely with global customers to support:\n• Cost localization initiatives\n• Supplier capability assessment\n• Engineering collaboration for manufacturability\n• End-to-end procurement execution"
+        "chunk_id": 1
     },
     {
+        "content": "Our Strategic Sourcing Capabilities > Cost Benchmarking & Localization\nAnalyze global cost structures and enable cost-effective sourcing from India and Asia.",
+        "heading_path": "Our Strategic Sourcing Capabilities > Cost Benchmarking & Localization",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Strategic Sourcing",
         "source": "strategic_sourcing_hbt_global_sales_and_support.txt",
-        "chunk_id": 3,
-        "content": "### Our Strategic Sourcing Capabilities\n\n#### Supplier Discovery & Capability Assessment\nIdentify and qualify suppliers based on technical capability, quality systems, and manufacturing readiness.\n\n#### Cost Benchmarking & Localization\nAnalyze global cost structures and enable cost-effective sourcing from India and Asia.\n\n#### Engineering Collaboration\nSupport design optimization, manufacturability improvements, and prototype validation."
+        "chunk_id": 2
     },
     {
+        "content": "Our Strategic Sourcing Capabilities > Engineering Collaboration\nSupport design optimization, manufacturability improvements, and prototype validation.",
+        "heading_path": "Our Strategic Sourcing Capabilities > Engineering Collaboration",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Strategic Sourcing",
         "source": "strategic_sourcing_hbt_global_sales_and_support.txt",
-        "chunk_id": 4,
-        "content": "#### Supplier Development\nWork closely with manufacturing partners to ensure quality, scalability, and compliance.\n\n#### Quality & Compliance Assurance\nEnsure suppliers meet international quality and regulatory requirements."
+        "chunk_id": 3
     },
     {
+        "content": "Our Strategic Sourcing Capabilities > Supplier Development\nWork closely with manufacturing partners to ensure quality, scalability, and compliance.",
+        "heading_path": "Our Strategic Sourcing Capabilities > Supplier Development",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Strategic Sourcing",
         "source": "strategic_sourcing_hbt_global_sales_and_support.txt",
-        "chunk_id": 5,
-        "content": "#### End-to-End Supply Chain Execution\nFrom RFQ to delivery, we manage sourcing operations to ensure OTIF delivery and risk mitigation.\n• Technical review\n• Cost benchmarking\n• Risk evaluation\nOutcome: Go / No-Go sourcing decision\n• RFQ management\n• Supplier comparison\n• TCO analysis\n• Commercial negotiation\nOutcome: Optimized sourcing decision\n• Sample development\n• Prototype validation\n• Design optimization\nOutcome: Production-ready component\n• APQP / PPAP\n• Process validation"
+        "chunk_id": 4
     },
     {
+        "content": "Our Strategic Sourcing Capabilities > Quality & Compliance Assurance\nEnsure suppliers meet international quality and regulatory requirements.",
+        "heading_path": "Our Strategic Sourcing Capabilities > Quality & Compliance Assurance",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Strategic Sourcing",
         "source": "strategic_sourcing_hbt_global_sales_and_support.txt",
-        "chunk_id": 6,
-        "content": "• Design optimization\nOutcome: Production-ready component\n• APQP / PPAP\n• Process validation\n• Quality documentation\n• First article inspection\nOutcome: Production readiness assurance\n• Pre-dispatch inspection\n• Compliance verification\n• Shipment approval\nOutcome: Risk-mitigated delivery\n• Production tracking\n• Inventory coordination\n• Export documentation\n• Logistics management\nOutcome: On-time delivery\n• Supplier performance monitoring\n• Cost optimization review\n• Continuous improvement"
+        "chunk_id": 5
     },
     {
+        "content": "Our Strategic Sourcing Capabilities > End-to-End Supply Chain Execution\nFrom RFQ to delivery, we manage sourcing operations to ensure OTIF delivery and risk mitigation.\n• Technical review\n• Cost benchmarking\n• Risk evaluation\nOutcome: Go / No-Go sourcing decision\n• RFQ management\n• Supplier comparison\n• TCO analysis\n• Commercial negotiation\nOutcome: Optimized sourcing decision\n• Sample development\n• Prototype validation\n• Design optimization\nOutcome: Production-ready component\n• APQP / PPAP\n• Process validation\n• Quality documentation\n• First article inspection\nOutcome: Production readiness assurance\n• Pre-dispatch inspection\n• Compliance verification\n• Shipment approval\nOutcome: Risk-mitigated delivery\n• Production tracking\n• Inventory coordination\n• Export documentation\n• Logistics management\nOutcome: On-time delivery\n• Supplier performance monitoring\n• Cost optimization review\n• Continuous improvement\nOutcome: Sustained supply reliability",
+        "heading_path": "Our Strategic Sourcing Capabilities > End-to-End Supply Chain Execution",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Strategic Sourcing",
         "source": "strategic_sourcing_hbt_global_sales_and_support.txt",
-        "chunk_id": 7,
-        "content": "• Supplier performance monitoring\n• Cost optimization review\n• Continuous improvement\nOutcome: Sustained supply reliability"
+        "chunk_id": 6
     },
     {
+        "content": "Multi-Commodity Industrial Sourcing Expertise > Industrial Fabrication & Machining\n• CNC turning & machining\n• Laser cutting\n• Precision fabrication\n• Casting & forging\n• Stamping",
+        "heading_path": "Multi-Commodity Industrial Sourcing Expertise > Industrial Fabrication & Machining",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Strategic Sourcing",
         "source": "strategic_sourcing_hbt_global_sales_and_support.txt",
-        "chunk_id": 8,
-        "content": "### Multi-Commodity Industrial Sourcing Expertise\n\n#### Industrial Fabrication & Machining\n• CNC turning & machining\n• Laser cutting\n• Precision fabrication\n• Casting & forging\n• Stamping\n\n#### Hydraulic Systems\n• Hydraulic cylinders\n• Hydraulic valves\n• Connectors & end caps\n• Hose assemblies\n\n#### Mining Equipment Components\n• Shearer drums\n• Work tools\n\n#### Electrical & Automation Components\n• Control panels\n• Wiring harness\n• PLC integration"
+        "chunk_id": 7
     },
     {
+        "content": "Multi-Commodity Industrial Sourcing Expertise > Hydraulic Systems\n• Hydraulic cylinders\n• Hydraulic valves\n• Connectors & end caps\n• Hose assemblies",
+        "heading_path": "Multi-Commodity Industrial Sourcing Expertise > Hydraulic Systems",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Strategic Sourcing",
         "source": "strategic_sourcing_hbt_global_sales_and_support.txt",
-        "chunk_id": 9,
-        "content": "## Our Supplier Ecosystem\n\n#### Strong Global Supplier Network\n• 150+ qualified suppliers\n• Multi-commodity manufacturing capabilities\n• Global quality compliance\n• Long-term supplier partnerships\n\n#### Key Capabilities\n• Precision machining\n• Fabrication & welding\n• Automation assemblies"
+        "chunk_id": 8
     },
     {
+        "content": "Multi-Commodity Industrial Sourcing Expertise > Electrical & Automation Components\n• Control panels\n• Wiring harness\n• PLC integration",
+        "heading_path": "Multi-Commodity Industrial Sourcing Expertise > Electrical & Automation Components",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Strategic Sourcing",
         "source": "strategic_sourcing_hbt_global_sales_and_support.txt",
-        "chunk_id": 10,
-        "content": "## WHY HBT INDIA?\n\n#### The Vibrant Team\nStrong Product Expert + Industry Experience Experienced Engineering & Sourcing professionals Global quality & manufacturing compliance Multi-Commodity Expertise\n• Strong Product Expert + Industry Experience\n• Experienced Engineering & Sourcing professionals\n• Global quality & manufacturing compliance\n• Multi-Commodity Expertise"
+        "chunk_id": 9
     },
     {
+        "content": "Our Supplier Ecosystem > Strong Global Supplier Network\n• 150+ qualified suppliers\n• Multi-commodity manufacturing capabilities\n• Global quality compliance\n• Long-term supplier partnerships",
+        "heading_path": "Our Supplier Ecosystem > Strong Global Supplier Network",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Strategic Sourcing",
         "source": "strategic_sourcing_hbt_global_sales_and_support.txt",
-        "chunk_id": 11,
-        "content": "#### End-to-End Capability\nSupplier identification --> final delivery ownership Cost Localization Strategy & Process End-to-End Supply Chain Management\n• Supplier identification --> final delivery ownership\n• Cost Localization Strategy & Process\n• End-to-End Supply Chain Management"
+        "chunk_id": 10
     },
     {
+        "content": "Our Supplier Ecosystem > Key Capabilities\n• Precision machining\n• Fabrication & welding\n• Automation assemblies",
+        "heading_path": "Our Supplier Ecosystem > Key Capabilities",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Strategic Sourcing",
         "source": "strategic_sourcing_hbt_global_sales_and_support.txt",
-        "chunk_id": 12,
-        "content": "#### Powerful Supplier Eco System\n150+ qualified supplier network Approved Supplier Network Strong vendor partnerships Scalable & sustainable manufacturing\n• 150+ qualified supplier network\n• Approved Supplier Network\n• Strong vendor partnerships\n• Scalable & sustainable manufacturing\n\n#### How can we help you?\nDo you have questions about our services? Do you need an individual offer or would you like to request a non-binding consultation?\nPlease feel free to contact us."
+        "chunk_id": 11
     },
     {
+        "content": "WHY HBT INDIA? > The Vibrant Team\nStrong Product Expert + Industry Experience Experienced Engineering & Sourcing professionals Global quality & manufacturing compliance Multi-Commodity Expertise\n• Strong Product Expert + Industry Experience\n• Experienced Engineering & Sourcing professionals\n• Global quality & manufacturing compliance\n• Multi-Commodity Expertise",
+        "heading_path": "WHY HBT INDIA? > The Vibrant Team",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Strategic Sourcing",
+        "source": "strategic_sourcing_hbt_global_sales_and_support.txt",
+        "chunk_id": 12
+    },
+    {
+        "content": "WHY HBT INDIA? > End-to-End Capability\nSupplier identification --> final delivery ownership Cost Localization Strategy & Process End-to-End Supply Chain Management\n• Supplier identification --> final delivery ownership\n• Cost Localization Strategy & Process\n• End-to-End Supply Chain Management",
+        "heading_path": "WHY HBT INDIA? > End-to-End Capability",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Strategic Sourcing",
+        "source": "strategic_sourcing_hbt_global_sales_and_support.txt",
+        "chunk_id": 13
+    },
+    {
+        "content": "WHY HBT INDIA? > Powerful Supplier Eco System\n150+ qualified supplier network Approved Supplier Network Strong vendor partnerships Scalable & sustainable manufacturing\n• 150+ qualified supplier network\n• Approved Supplier Network\n• Strong vendor partnerships\n• Scalable & sustainable manufacturing",
+        "heading_path": "WHY HBT INDIA? > Powerful Supplier Eco System",
+        "section_type": "content",
+        "doc_title": "Engineering-Driven Strategic Sourcing",
+        "source": "strategic_sourcing_hbt_global_sales_and_support.txt",
+        "chunk_id": 14
+    },
+    {
+        "content": "Tech Documentation\nIndustrial equipment requires precise documentation to ensure safe operation, efficient maintenance, and compliance with global standards.\nHBT Engineering transforms complex engineering information into clear, structured technical publications designed for multiple stakeholders including operators, service technicians, dealers, and product support teams.\nOur documentation services support the entire product lifecycle — from product launch to long-term maintenance and service operations.",
+        "heading_path": "Tech Documentation",
+        "section_type": "content",
+        "doc_title": "Engineering Knowledge Delivered with Clarity",
         "source": "tech_documentation_hbt_global_sales_and_support.txt",
-        "chunk_id": 1,
-        "content": "### Tech Documentation\nIndustrial equipment requires precise documentation to ensure safe operation, efficient maintenance, and compliance with global standards.\nHBT Engineering transforms complex engineering information into clear, structured technical publications designed for multiple stakeholders including operators, service technicians, dealers, and product support teams."
+        "chunk_id": 0
     },
     {
+        "content": "The documentation process includes six key stages: > 1. Analysis\nCollaborating with engineering teams and stakeholders to gather product information and documentation requirements.",
+        "heading_path": "The documentation process includes six key stages: > 1. Analysis",
+        "section_type": "content",
+        "doc_title": "Engineering Knowledge Delivered with Clarity",
         "source": "tech_documentation_hbt_global_sales_and_support.txt",
-        "chunk_id": 2,
-        "content": "Our documentation services support the entire product lifecycle — from product launch to long-term maintenance and service operations."
+        "chunk_id": 1
     },
     {
+        "content": "The documentation process includes six key stages: > 2. Designing\nDeveloping templates, documentation standards, and style guides tailored to customer requirements.",
+        "heading_path": "The documentation process includes six key stages: > 2. Designing",
+        "section_type": "content",
+        "doc_title": "Engineering Knowledge Delivered with Clarity",
         "source": "tech_documentation_hbt_global_sales_and_support.txt",
-        "chunk_id": 3,
-        "content": "## The documentation process includes six key stages:\n\n#### 1. Analysis\nCollaborating with engineering teams and stakeholders to gather product information and documentation requirements.\n\n#### 2. Designing\nDeveloping templates, documentation standards, and style guides tailored to customer requirements.\n\n#### 3. Authoring\nCreating structured, accurate technical documentation aligned with engineering specifications."
+        "chunk_id": 2
     },
     {
+        "content": "The documentation process includes six key stages: > 3. Authoring\nCreating structured, accurate technical documentation aligned with engineering specifications.",
+        "heading_path": "The documentation process includes six key stages: > 3. Authoring",
+        "section_type": "content",
+        "doc_title": "Engineering Knowledge Delivered with Clarity",
         "source": "tech_documentation_hbt_global_sales_and_support.txt",
-        "chunk_id": 4,
-        "content": "#### 4. Review\nPerforming multi-level validation including self-checks, SME reviews, and customer approvals.\n\n#### 5. Publishing\nDelivering documentation in multiple formats such as digital manuals, print-ready documents, and online help systems.\n\n#### 6. Maintenance\nUpdating documentation based on product upgrades, engineering changes, and field feedback."
+        "chunk_id": 3
     },
     {
+        "content": "The documentation process includes six key stages: > 4. Review\nPerforming multi-level validation including self-checks, SME reviews, and customer approvals.",
+        "heading_path": "The documentation process includes six key stages: > 4. Review",
+        "section_type": "content",
+        "doc_title": "Engineering Knowledge Delivered with Clarity",
         "source": "tech_documentation_hbt_global_sales_and_support.txt",
-        "chunk_id": 5,
-        "content": "## What We Serve\n\n#### Parts Catalogues & Technical Illustrations\n• Illustrated Parts Catalogues (IPC)\n• 3D Parts Catalogues\n• Technical Illustrations\n• Interactive parts identification tools\nThese solutions enable faster spare parts identification and improved service efficiency."
+        "chunk_id": 4
     },
     {
+        "content": "The documentation process includes six key stages: > 5. Publishing\nDelivering documentation in multiple formats such as digital manuals, print-ready documents, and online help systems.",
+        "heading_path": "The documentation process includes six key stages: > 5. Publishing",
+        "section_type": "content",
+        "doc_title": "Engineering Knowledge Delivered with Clarity",
         "source": "tech_documentation_hbt_global_sales_and_support.txt",
-        "chunk_id": 6,
-        "content": "#### Operation & Maintenance Documentation\n• Operation & Maintenance Manuals (OMM)\n• Owner’s manuals\n• Automation documentation\n• Standard work procedures\nThese manuals ensure safe equipment operation and standardized maintenance practices."
+        "chunk_id": 5
     },
     {
+        "content": "The documentation process includes six key stages: > 6. Maintenance\nUpdating documentation based on product upgrades, engineering changes, and field feedback.",
+        "heading_path": "The documentation process includes six key stages: > 6. Maintenance",
+        "section_type": "content",
+        "doc_title": "Engineering Knowledge Delivered with Clarity",
         "source": "tech_documentation_hbt_global_sales_and_support.txt",
-        "chunk_id": 7,
-        "content": "#### Service & Repair Documentation\n• Repair procedures\n• Troubleshooting guides\n• Disassembly & Assembly manuals\n• Reuse & Salvage documentation\n• Reliability Centered Maintenance (RCM)\nThese documents help technicians perform accurate repairs and minimize downtime."
+        "chunk_id": 6
     },
     {
+        "content": "What We Serve > Parts Catalogues & Technical Illustrations\n• Illustrated Parts Catalogues (IPC)\n• 3D Parts Catalogues\n• Technical Illustrations\n• Interactive parts identification tools\nThese solutions enable faster spare parts identification and improved service efficiency.",
+        "heading_path": "What We Serve > Parts Catalogues & Technical Illustrations",
+        "section_type": "content",
+        "doc_title": "Engineering Knowledge Delivered with Clarity",
         "source": "tech_documentation_hbt_global_sales_and_support.txt",
-        "chunk_id": 8,
-        "content": "#### Operator & Service Information Authoring\nProvide structured service content including:\n• Maintenance procedures\n• Service bulletins\n• Field troubleshooting instructions\n• Electro-hydraulic schematics\n• Digital service manuals\nThese solutions improve operator usability and service efficiency."
+        "chunk_id": 7
     },
     {
+        "content": "What We Serve > Operation & Maintenance Documentation\n• Operation & Maintenance Manuals (OMM)\n• Owner’s manuals\n• Automation documentation\n• Standard work procedures\nThese manuals ensure safe equipment operation and standardized maintenance practices.",
+        "heading_path": "What We Serve > Operation & Maintenance Documentation",
+        "section_type": "content",
+        "doc_title": "Engineering Knowledge Delivered with Clarity",
         "source": "tech_documentation_hbt_global_sales_and_support.txt",
-        "chunk_id": 9,
-        "content": "#### Compliance & Safety Documentation\n• Health & safety manuals\n• Technical information bulletins\n• Certification documentation\n• Regulatory compliance documentation\nThese ensure products comply with industry regulations and safety standards."
+        "chunk_id": 8
     },
     {
+        "content": "What We Serve > Service & Repair Documentation\n• Repair procedures\n• Troubleshooting guides\n• Disassembly & Assembly manuals\n• Reuse & Salvage documentation\n• Reliability Centered Maintenance (RCM)\nThese documents help technicians perform accurate repairs and minimize downtime.",
+        "heading_path": "What We Serve > Service & Repair Documentation",
+        "section_type": "content",
+        "doc_title": "Engineering Knowledge Delivered with Clarity",
         "source": "tech_documentation_hbt_global_sales_and_support.txt",
-        "chunk_id": 10,
-        "content": "## Documentation Formats & Delivery\nTechnical documentation can be delivered in multiple formats:\n\n#### PDF Manuals\n\n#### Interactive Web Documentation\n\n#### Online Help Systems\n\n#### LinkOne Parts Catalogs\n\n#### Technical Videos\n\n#### Digital Manuals\n\n#### Print-Ready Publications"
+        "chunk_id": 9
     },
     {
+        "content": "What We Serve > Operator & Service Information Authoring\nProvide structured service content including:\n• Maintenance procedures\n• Service bulletins\n• Field troubleshooting instructions\n• Electro-hydraulic schematics\n• Digital service manuals\nThese solutions improve operator usability and service efficiency.",
+        "heading_path": "What We Serve > Operator & Service Information Authoring",
+        "section_type": "content",
+        "doc_title": "Engineering Knowledge Delivered with Clarity",
         "source": "tech_documentation_hbt_global_sales_and_support.txt",
-        "chunk_id": 11,
-        "content": "## Digital Documentation for Harsh Environments\nMany industrial products operate in extreme environments.\n\n#### HBT documentation solutions are designed for:\n• Field service technicians\n• Mining environments\n• Industrial plants\n• Remote service operations\n\n#### Features include:\n• ruggedized manuals\n• multilingual documentation\n• digital access for field engineers\n• mobile-friendly content"
+        "chunk_id": 10
     },
     {
+        "content": "What We Serve > Compliance & Safety Documentation\n• Health & safety manuals\n• Technical information bulletins\n• Certification documentation\n• Regulatory compliance documentation\nThese ensure products comply with industry regulations and safety standards.",
+        "heading_path": "What We Serve > Compliance & Safety Documentation",
+        "section_type": "content",
+        "doc_title": "Engineering Knowledge Delivered with Clarity",
         "source": "tech_documentation_hbt_global_sales_and_support.txt",
-        "chunk_id": 12,
-        "content": "## Who We Serve\nTechnical documentation supports a wide ecosystem of users:\n\n#### Operators\n\n#### Service Technicians\n\n#### Product Support Teams\n\n#### Field Engineers\n\n#### Dealers and Distributors\n\n#### Equipment Owners\n\n#### Customer Support Teams\n\n#### How can we help you?\nDo you have questions about our services? Do you need an individual offer or would you like to request a non-binding consultation?\nPlease feel free to contact us."
+        "chunk_id": 11
     },
     {
-        "source": "technology_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 0,
-        "content": "### Advancing Industry Through Innovation and Execution\n\n### Technology Services"
+        "content": "Documentation Formats & Delivery\nTechnical documentation can be delivered in multiple formats:",
+        "heading_path": "Documentation Formats & Delivery",
+        "section_type": "content",
+        "doc_title": "Engineering Knowledge Delivered with Clarity",
+        "source": "tech_documentation_hbt_global_sales_and_support.txt",
+        "chunk_id": 12
     },
     {
-        "source": "technology_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 1,
-        "content": "## HBT Technology Services\nHBT combines deep engineering expertise, industrial automation excellence, and data-driven innovation to help organizations build smarter, more efficient, and future-ready operations. We deliver end-to-end capabilities—from product engineering and embedded software to automation, data services, and lifecycle support—under one trusted partner."
+        "content": "Digital Documentation for Harsh Environments > HBT documentation solutions are designed for:\n• Field service technicians\n• Mining environments\n• Industrial plants\n• Remote service operations",
+        "heading_path": "Digital Documentation for Harsh Environments > HBT documentation solutions are designed for:",
+        "section_type": "content",
+        "doc_title": "Engineering Knowledge Delivered with Clarity",
+        "source": "tech_documentation_hbt_global_sales_and_support.txt",
+        "chunk_id": 13
     },
     {
-        "source": "technology_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 2,
-        "content": "Our approach blends real-world industry experience with scalable digital solutions to accelerate time-to-market and reduce operational risk. With a strong focus on quality, reliability, and long-term value creation, we help businesses optimize performance across the entire product and operational lifecycle. HBT is committed to delivering measurable impact, global standards, and sustainable growth for our customers."
+        "content": "Digital Documentation for Harsh Environments > Features include:\n• ruggedized manuals\n• multilingual documentation\n• digital access for field engineers\n• mobile-friendly content",
+        "heading_path": "Digital Documentation for Harsh Environments > Features include:",
+        "section_type": "content",
+        "doc_title": "Engineering Knowledge Delivered with Clarity",
+        "source": "tech_documentation_hbt_global_sales_and_support.txt",
+        "chunk_id": 14
     },
     {
-        "source": "technology_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 3,
-        "content": "### Our Services will be as Mentioned Below\n\n#### Data as a Service (DaaS)\nUnlock the full value of your business data with HBT’s end-to-end data solutions. We help organizations integrate, govern, and transform data into powerful insights that drive faster decisions, operational efficiency, and sustainable growth across the enterprise."
+        "content": "Who We Serve\nTechnical documentation supports a wide ecosystem of users:",
+        "heading_path": "Who We Serve",
+        "section_type": "content",
+        "doc_title": "Engineering Knowledge Delivered with Clarity",
+        "source": "tech_documentation_hbt_global_sales_and_support.txt",
+        "chunk_id": 15
     },
     {
+        "content": "Advancing Industry Through Innovation and Execution — Our Services will be as Mentioned Below\nThe complete list of service categories is:\n• Data as a Service (DaaS)\n• Automation and Software Solutions\n• Strategic Sourcing\n• Strategic Product Support\n• Engineering Services\n• Tech Documentation",
+        "heading_path": "HBT Technology Services > Our Services will be as Mentioned Below",
+        "section_type": "service_index",
+        "doc_title": "Advancing Industry Through Innovation and Execution",
         "source": "technology_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 4,
-        "content": "#### Automation and Software Solutions\nHBT delivers advanced industrial automation and software solutions that improve productivity, reliability, and operational visibility across modern manufacturing and industrial environments. From embedded software and industrial control systems to validation and automation engineering, we help organizations design, build, and scale intelligent, connected systems."
+        "chunk_id": 0
     },
     {
+        "content": "HBT Technology Services\nHBT combines deep engineering expertise, industrial automation excellence, and data-driven innovation to help organizations build smarter, more efficient, and future-ready operations. We deliver end-to-end capabilities—from product engineering and embedded software to automation, data services, and lifecycle support—under one trusted partner.\nOur approach blends real-world industry experience with scalable digital solutions to accelerate time-to-market and reduce operational risk. With a strong focus on quality, reliability, and long-term value creation, we help businesses optimize performance across the entire product and operational lifecycle. HBT is committed to delivering measurable impact, global standards, and sustainable growth for our customers.",
+        "heading_path": "HBT Technology Services",
+        "section_type": "content",
+        "doc_title": "Advancing Industry Through Innovation and Execution",
         "source": "technology_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 5,
-        "content": "#### Strategic Sourcing\nBuild resilient, cost-efficient supply chains that are ready for tomorrow’s challenges. HBT combines procurement expertise, analytics, and supplier intelligence to optimize sourcing strategies, reduce risks, and improve long-term supplier performance."
+        "chunk_id": 1
     },
     {
+        "content": "HBT Technology Services > Our Services will be as Mentioned Below > Data as a Service (DaaS)\nUnlock the full value of your business data with HBT’s end-to-end data solutions. We help organizations integrate, govern, and transform data into powerful insights that drive faster decisions, operational efficiency, and sustainable growth across the enterprise.",
+        "heading_path": "HBT Technology Services > Our Services will be as Mentioned Below > Data as a Service (DaaS)",
+        "section_type": "content",
+        "doc_title": "Advancing Industry Through Innovation and Execution",
         "source": "technology_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 6,
-        "content": "#### Strategic Product Suport\nMaximize product value beyond launch with HBT’s comprehensive product support solutions. From CRM optimization to aftermarket and lifecycle services, we help organizations strengthen customer relationships, unlock new revenue streams, and extend product profitability."
+        "chunk_id": 2
     },
     {
+        "content": "HBT Technology Services > Our Services will be as Mentioned Below > Automation and Software Solutions\nHBT delivers advanced industrial automation and software solutions that improve productivity, reliability, and operational visibility across modern manufacturing and industrial environments. From embedded software and industrial control systems to validation and automation engineering, we help organizations design, build, and scale intelligent, connected systems.",
+        "heading_path": "HBT Technology Services > Our Services will be as Mentioned Below > Automation and Software Solutions",
+        "section_type": "content",
+        "doc_title": "Advancing Industry Through Innovation and Execution",
         "source": "technology_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 7,
-        "content": "#### Engineering Services\nAccelerate innovation with HBT’s scalable engineering capabilities. From concept and design to validation and deployment, we help businesses develop reliable, high-performance products that reach the market faster and perform better."
+        "chunk_id": 3
     },
     {
+        "content": "HBT Technology Services > Our Services will be as Mentioned Below > Strategic Sourcing\nBuild resilient, cost-efficient supply chains that are ready for tomorrow’s challenges. HBT combines procurement expertise, analytics, and supplier intelligence to optimize sourcing strategies, reduce risks, and improve long-term supplier performance.",
+        "heading_path": "HBT Technology Services > Our Services will be as Mentioned Below > Strategic Sourcing",
+        "section_type": "content",
+        "doc_title": "Advancing Industry Through Innovation and Execution",
         "source": "technology_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 8,
-        "content": "#### Tech Documentation\nEmpower users and streamline operations with clear, compliant, and globally standardized technical documentation. HBT ensures your products are supported with accurate, structured, and easy-to-understand documentation that enhances usability and reduces operational risk.\n\n#### Built on engineering powered by intelligence\n\n#### Time to data model Deployment less than"
+        "chunk_id": 4
     },
     {
+        "content": "HBT Technology Services > Our Services will be as Mentioned Below > Strategic Product Support\nMaximize product value beyond launch with HBT’s comprehensive product support solutions. From CRM optimization to aftermarket and lifecycle services, we help organizations strengthen customer relationships, unlock new revenue streams, and extend product profitability.",
+        "heading_path": "HBT Technology Services > Our Services will be as Mentioned Below > Strategic Product Support",
+        "section_type": "content",
+        "doc_title": "Advancing Industry Through Innovation and Execution",
         "source": "technology_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 9,
-        "content": "### User adaptation rate\n\n### Engineering Cost saved Per year\n\n### Procurement cost\n\n### Guided leaders\n\n### Countries served"
+        "chunk_id": 5
     },
     {
+        "content": "HBT Technology Services > Our Services will be as Mentioned Below > Engineering Services\nAccelerate innovation with HBT’s scalable engineering capabilities. From concept and design to validation and deployment, we help businesses develop reliable, high-performance products that reach the market faster and perform better.",
+        "heading_path": "HBT Technology Services > Our Services will be as Mentioned Below > Engineering Services",
+        "section_type": "content",
+        "doc_title": "Advancing Industry Through Innovation and Execution",
         "source": "technology_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 10,
-        "content": "### HBT Engineering\nHBT [Hauhinco Bergbau Technik] subsidiaries and partner offices are strategically located in 15 countries including Australia, United States, China, Germany, India, Russia and headquartered in Luenen, Germany. It is a world class machine manufacturer and fully integrated single solution provider – specializing in systems and equipment for underground coal mining, Tunnelling, High Pressure Pumps, Control Systems, Drives & Motors."
+        "chunk_id": 6
     },
     {
+        "content": "HBT Technology Services > Our Services will be as Mentioned Below > Tech Documentation\nEmpower users and streamline operations with clear, compliant, and globally standardized technical documentation. HBT ensures your products are supported with accurate, structured, and easy-to-understand documentation that enhances usability and reduces operational risk.",
+        "heading_path": "HBT Technology Services > Our Services will be as Mentioned Below > Tech Documentation",
+        "section_type": "content",
+        "doc_title": "Advancing Industry Through Innovation and Execution",
         "source": "technology_services_hbt_global_sales_and_support.txt",
-        "chunk_id": 11,
-        "content": "HBT Engineering Private Limited, India is a company consisting of three primary departments that play a crucial role in supporting the Global HBT Group Business Technology services. These departments include Automation Engineering, Mechanical Engineering and Global Product Support."
+        "chunk_id": 7
+    },
+    {
+        "content": "HBT Technology Services > HBT Engineering\nHBT [Hauhinco Bergbau Technik] subsidiaries and partner offices are strategically located in 15 countries including Australia, United States, China, Germany, India, Russia and headquartered in Luenen, Germany. It is a world class machine manufacturer and fully integrated single solution provider – specializing in systems and equipment for underground coal mining, Tunnelling, High Pressure Pumps, Control Systems, Drives & Motors.\nHBT Engineering Private Limited, India is a company consisting of three primary departments that play a crucial role in supporting the Global HBT Group Business Technology services. These departments include Automation Engineering, Mechanical Engineering and Global Product Support.",
+        "heading_path": "HBT Technology Services > HBT Engineering",
+        "section_type": "content",
+        "doc_title": "Advancing Industry Through Innovation and Execution",
+        "source": "technology_services_hbt_global_sales_and_support.txt",
+        "chunk_id": 8
     }
 ]

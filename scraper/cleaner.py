@@ -1,3 +1,9 @@
+import os
+import re
+from typing import Set, List
+
+INPUT_FOLDER = "data/processed"
+
 UNWANTED_EXACT = {
     "home", "company", "facts & figures", "management",
     "sustainability", "history", "news", "career", "jobs",
@@ -36,3 +42,56 @@ def should_drop(line: str) -> bool:
             if sub in low:
                 return True
     return False
+
+
+def clean_file(path: str) -> int:
+    with open(path, "r", encoding="utf-8") as f:
+        text = f.read()
+
+    lines = text.splitlines()
+    cleaned: List[str] = []
+    prev_blank = False
+
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            if not prev_blank:
+                cleaned.append("")
+                prev_blank = True
+            continue
+        if should_drop(stripped):
+            prev_blank = False
+            continue
+        cleaned.append(stripped)
+        prev_blank = False
+
+    result = "\n".join(cleaned).strip()
+    result = re.sub(r"\n{3,}", "\n\n", result)
+    result = re.sub(r"[ \t]+", " ", result)
+
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(result + "\n")
+
+    return len(result.split())
+
+
+def main():
+    if not os.path.isdir(INPUT_FOLDER):
+        print(f"Folder not found: {INPUT_FOLDER}")
+        return
+
+    for filename in sorted(os.listdir(INPUT_FOLDER)):
+        if not filename.endswith(".txt"):
+            continue
+        path = os.path.join(INPUT_FOLDER, filename)
+        try:
+            words = clean_file(path)
+            print(f"  ✓ {words:>5} words → {filename}")
+        except Exception as e:
+            print(f"  ✗ Failed {filename}: {e}")
+
+    print("\nCleaning complete!")
+
+
+if __name__ == "__main__":
+    main()
