@@ -1,34 +1,28 @@
 from rag.retriever import retrieve_context
 from llm.ollama_client import generate_response
 
-def ask_question(question):
 
-    results = retrieve_context(
-        question,
-        top_k=2
-    )
+def ask_question(question: str) -> str:
+    results = retrieve_context(question, top_k=5)
 
     if not results["documents"][0]:
         return "I could not find relevant information in the knowledge base."
 
-    context = "\n\n".join(
-        results["documents"][0]
-    )
+    context_parts = []
+    for doc, meta in zip(results["documents"][0], results["metadatas"][0]):
+        source = meta.get("source", "").replace(".txt", "").replace("_", " ")
+        context_parts.append(f"[Source: {source}]\n{doc}")
 
-    prompt = f"""
-You are an AI Knowledge Assistant for HBT.
+    context = "\n\n---\n\n".join(context_parts)
 
-Use ONLY the provided context.
+    prompt = f"""You are an AI Knowledge Assistant for HBT Technology Services.
 
-When answering:
-- Summarize clearly.
-- Use bullet points when listing services.
-- Ignore navigation menus and website boilerplate.
-- Do not use outside knowledge.
-
-If the answer is not present in the context, reply exactly:
-
-I could not find relevant information in the knowledge base.
+Answer ONLY using the provided context below.
+- List services as bullet points when the question asks "what services".
+- Be concise and professional.
+- Ignore any navigation text, "Click here", or counter numbers in the context.
+- Do NOT use outside knowledge.
+- If the answer is not in the context, reply: "I could not find relevant information in the knowledge base."
 
 CONTEXT:
 {context}
@@ -36,9 +30,6 @@ CONTEXT:
 QUESTION:
 {question}
 
-ANSWER:
-"""
+ANSWER:"""
 
-    answer = generate_response(prompt)
-
-    return answer
+    return generate_response(prompt)
