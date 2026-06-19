@@ -4,7 +4,7 @@ from typing import Set, List
 
 INPUT_FOLDER = "data/processed"
 
-UNWANTED_EXACT: Set[str] = {
+UNWANTED_EXACT = {
     "home", "company", "facts & figures", "management",
     "sustainability", "history", "news", "career", "jobs",
     "contact", "privacy policy", "cookie policy",
@@ -12,7 +12,6 @@ UNWANTED_EXACT: Set[str] = {
     "accept", "deny", "view preferences", "save preferences",
     "manage consent", "manage cookie consent", "skip to content",
     "click here", "read more", "learn more", "view all",
-    "technology", "services",
 }
 
 ALWAYS_NOISE_RE = re.compile(
@@ -24,7 +23,7 @@ ALWAYS_NOISE_RE = re.compile(
     re.IGNORECASE,
 )
 
-SHORT_LINE_NOISE: List[str] = [
+SHORT_LINE_NOISE = [
     "cookie", "consent", "opt-out", "manage cookie",
     "save preferences", "gdpr",
 ]
@@ -35,8 +34,6 @@ def should_drop(line: str) -> bool:
     if not low:
         return False
     if low in UNWANTED_EXACT:
-        return True
-    if low.startswith("products"):
         return True
     if ALWAYS_NOISE_RE.search(low):
         return True
