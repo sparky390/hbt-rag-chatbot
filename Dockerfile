@@ -24,7 +24,7 @@ COPY requirements.txt .
 # CPU-only torch first — sentence-transformers would otherwise pull the
 # full CUDA build, adding multiple GB to the image for no benefit here.
 RUN pip install --upgrade pip \
-    && pip install torch --index-url https://download.pytorch.org/whl/cpu \
+    && pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu \
     && pip install -r requirements.txt
 
 # Bake the embedding model into the image so first request doesn't pay a

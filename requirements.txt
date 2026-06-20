@@ -7,5 +7,4 @@ sentence-transformers
 chromadb
 ollama
 pypdf
-torchvision
 pytest
