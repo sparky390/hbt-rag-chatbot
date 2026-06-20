@@ -14,11 +14,9 @@
   - [Option B — Local Python](#option-b--local-python)
 - [Architecture](#%EF%B8%8F-architecture)
 - [Features](#-features)
-- [Example Questions](#-example-questions)
 - [Bonus Features Implemented](#-bonus-features-implemented)
 - [Assumptions](#-assumptions)
 - [Challenges Faced](#-challenges-faced)
-- [Notes](#-notes)
 
 ---
 
@@ -332,21 +330,6 @@ top-k chunks → build_context_block() → prompt → Ollama
 
 ---
 
-## 💬 Example Questions
-
-- What services does HBT Technology Services offer?
-- What industries does HBT serve?
-- What analytics capabilities are available?
-- What sourcing solutions are offered?
-- What digital transformation services are available?
-- What is Data as a Service at HBT?
-- What automation solutions does HBT provide?
-- What consulting services are available?
-- What does HBT do for technical documentation?
-- What is strategic sourcing at HBT?
-
----
-
 ## 🌟 Bonus Features Implemented
 
 | Feature | Status | Details |
@@ -396,14 +379,6 @@ The first container run downloaded the `all-MiniLM-L6-v2` model (~90 MB) from Hu
 `sentence-transformers` pulls the full CUDA PyTorch build by default (~2.5 GB). **Solution:** explicitly installed the CPU-only wheel first (`--index-url https://download.pytorch.org/whl/cpu`) before `requirements.txt`, reducing the final image size significantly.
 
 ---
-
-## 📝 Notes
-
-- Re-scraping is only needed if HBT updates their website; otherwise `chroma_db/` can be reused as-is.
-- `langchain` and `langchain-text-splitters` are listed in `requirements.txt` as transitive dependencies but the RAG pipeline is implemented directly without them — no `LangChain` abstractions are used.
-- The `ui/` folder contains stub helpers referenced in the project structure; all active UI logic lives in `app.py`.
-- Docker volumes (`ollama_data`, `chroma_data`) persist between restarts. Run `docker compose down -v` to wipe them completely.
-
 
 ## 🔗 Connect With Me
 
