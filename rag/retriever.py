@@ -8,7 +8,8 @@ CHROMA_PATH = "chroma_db"
 COLLECTION_NAME = "hbt_knowledge"
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 
-MIN_SIMILARITY = 0.25
+MIN_SIMILARITY = 0.15          # FIX 1: lowered from 0.25 → catches short generic terms
+                               # like "Engineering Services" that score 0.18–0.22
 DEFAULT_TOP_K = 5
 DEFAULT_FETCH_K = 20
 MAX_PER_SOURCE = 3

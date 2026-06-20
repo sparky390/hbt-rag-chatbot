@@ -15,6 +15,7 @@ st.caption("Answers grounded in HBT Technology Services website content.")
 warmup()
 
 FEEDBACK_FILE = "data/feedback.json"
+MAX_HISTORY_TURNS = 3
 
 
 def save_feedback(question: str, answer: str, rating: str):
@@ -32,6 +33,24 @@ def save_feedback(question: str, answer: str, rating: str):
         json.dump(existing, f, indent=4, ensure_ascii=False)
 
 
+def _build_history(messages: list, max_turns: int = MAX_HISTORY_TURNS):
+    """
+    Walk backwards through session messages and collect up to `max_turns`
+    complete user/assistant pairs in chronological order.
+    Returns a list of (user_text, assistant_text) tuples, or None if none yet.
+    """
+    pairs = []
+    i = len(messages) - 1
+    while i >= 1 and len(pairs) < max_turns:
+        if messages[i]["role"] == "assistant" and messages[i - 1]["role"] == "user":
+            pairs.append((messages[i - 1]["content"], messages[i]["content"]))
+            i -= 2
+        else:
+            i -= 1
+    pairs.reverse()
+    return pairs if pairs else None
+
+
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
@@ -40,6 +59,16 @@ if "feedback" not in st.session_state:
 
 if "ingested_pdfs" not in st.session_state:
     st.session_state.ingested_pdfs = set()
+
+# Memory: last resolved topic for pronoun chaining ("that", "it")
+if "last_resolved_topic" not in st.session_state:
+    st.session_state.last_resolved_topic = None
+
+# Memory: persisted bullet list from the most recent enumeration answer
+# so ordinal follow-ups ("second one", "third one") always resolve against
+# the ORIGINAL list, not the last single-topic answer.
+if "reference_list" not in st.session_state:
+    st.session_state.reference_list = None
 
 
 def render_sources(sources):
@@ -101,6 +130,8 @@ with st.sidebar:
     if st.button("🗑️ Clear Chat", use_container_width=True):
         st.session_state.messages = []
         st.session_state.feedback = {}
+        st.session_state.last_resolved_topic = None
+        st.session_state.reference_list = None
         st.rerun()
 
     st.caption(
@@ -138,10 +169,7 @@ if uploaded_pdf:
 user_input = user_input or pending
 
 if user_input:
-    history = None
-    msgs = st.session_state.messages
-    if len(msgs) >= 2 and msgs[-1]["role"] == "assistant" and msgs[-2]["role"] == "user":
-        history = [(msgs[-2]["content"], msgs[-1]["content"])]
+    history = _build_history(st.session_state.messages)
 
     st.session_state.messages.append({"role": "user", "content": user_input})
     with st.chat_message("user"):
@@ -149,11 +177,20 @@ if user_input:
 
     with st.chat_message("assistant"):
         with st.spinner("Searching knowledge base..."):
-            result = ask_question_detailed(user_input, history=history)
+            result = ask_question_detailed(
+                user_input,
+                history=history,
+                last_resolved_topic=st.session_state.last_resolved_topic,
+                reference_list=st.session_state.reference_list,
+            )
         st.write(result.answer)
 
         if result.answer != NOT_FOUND_MESSAGE:
             render_sources(result.sources)
+
+    # Persist memory for next turn
+    st.session_state.last_resolved_topic = result.resolved_topic
+    st.session_state.reference_list = result.reference_list
 
     st.session_state.messages.append({
         "role": "assistant",

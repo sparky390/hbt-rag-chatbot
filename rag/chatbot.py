@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
 
 from rag.retriever import retrieve_context, is_enumeration_query, warmup
-from rag.prompt_builder import build_context_block, build_prompt, NOT_FOUND_MESSAGE
+from rag.prompt_builder import build_context_block, build_prompt, NOT_FOUND_MESSAGE, resolve_reference
 from llm.ollama_client import generate_response
 
 DEFAULT_TOP_K = 5
@@ -21,6 +21,8 @@ class AnswerResult:
     answer: str
     sources: List[Source] = field(default_factory=list)
     grounded: bool = True
+    resolved_topic: Optional[str] = None      # topic resolved this turn (for pronoun chaining)
+    reference_list: Optional[List[str]] = None # the bullet list to resolve ordinals against
 
 
 def _humanize_filename(filename: str) -> str:
@@ -55,6 +57,13 @@ def _looks_like_refusal(answer: str) -> bool:
     return NOT_FOUND_MESSAGE.lower() in answer.lower()
 
 
+def _extract_topic(resolved_question: str, original_question: str) -> Optional[str]:
+    """Return the resolved topic string, or None if nothing changed."""
+    if resolved_question == original_question:
+        return None
+    return resolved_question
+
+
 def ask_question(question: str, top_k: int = DEFAULT_TOP_K) -> str:
     result = ask_question_detailed(question, top_k=top_k)
     return result.answer
@@ -64,30 +73,72 @@ def ask_question_detailed(
     question: str,
     top_k: int = DEFAULT_TOP_K,
     history: Optional[List[Tuple[str, str]]] = None,
+    last_resolved_topic: Optional[str] = None,
+    reference_list: Optional[List[str]] = None,  # NEW: persisted list from enumeration answers
 ) -> AnswerResult:
     enumeration = is_enumeration_query(question)
     effective_top_k = top_k + 3 if enumeration else top_k
 
-    # Enrich the *retrieval* query with the last exchange so follow-ups like
-    # "tell about the first one" can still find the right chunks — the LLM
-    # still answers the original `question`, not this expanded version.
-    retrieval_query = question
+    # Resolve vague references BEFORE retrieval.
+    # KEY FIX: if we have a persisted reference_list (from a previous enumeration
+    # answer), prefer it over the last answer text — because the last answer may
+    # be a single-topic answer that contains no list to parse.
+    resolved_question = question
     if history:
-        last_q, last_a = history[-1]
-        retrieval_query = f"{last_q} {last_a} {question}"
+        resolved_question = resolve_reference(
+            question,
+            history[-1][1],
+            last_resolved_topic=last_resolved_topic,
+            reference_list=reference_list,   # pass the persisted list
+        )
 
-    results = retrieve_context(retrieval_query, top_k=effective_top_k)
+    results = retrieve_context(resolved_question, top_k=effective_top_k)
 
     if not results["documents"]:
-        return AnswerResult(answer=NOT_FOUND_MESSAGE, sources=[], grounded=True)
+        return AnswerResult(
+            answer=NOT_FOUND_MESSAGE,
+            sources=[],
+            grounded=True,
+            resolved_topic=last_resolved_topic,
+            reference_list=reference_list,   # carry forward unchanged
+        )
 
     context = _assemble_context(results["documents"], results["metadatas"])
-    prompt = build_prompt(question, context, enumeration, history=history)
+    prompt = build_prompt(
+        question=question,
+        resolved_question=resolved_question,
+        context=context,
+        enumeration=enumeration,
+        history=history,
+    )
 
     answer = generate_response(prompt).strip()
 
     if _looks_like_refusal(answer):
-        return AnswerResult(answer=NOT_FOUND_MESSAGE, sources=[], grounded=True)
+        return AnswerResult(
+            answer=NOT_FOUND_MESSAGE,
+            sources=[],
+            grounded=True,
+            resolved_topic=last_resolved_topic,
+            reference_list=reference_list,
+        )
 
     sources = _build_sources(results["metadatas"], results["similarities"])
-    return AnswerResult(answer=answer, sources=sources, grounded=True)
+    new_topic = _extract_topic(resolved_question, question) or last_resolved_topic
+
+    # If this turn was an enumeration answer, extract and persist the list
+    # so future ordinal follow-ups can resolve against it correctly.
+    new_reference_list = reference_list
+    if enumeration:
+        from rag.prompt_builder import _extract_list_items
+        extracted = _extract_list_items(answer)
+        if extracted:
+            new_reference_list = extracted
+
+    return AnswerResult(
+        answer=answer,
+        sources=sources,
+        grounded=True,
+        resolved_topic=new_topic,
+        reference_list=new_reference_list,
+    )
