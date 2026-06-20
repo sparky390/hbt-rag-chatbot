@@ -38,6 +38,9 @@ if "messages" not in st.session_state:
 if "feedback" not in st.session_state:
     st.session_state.feedback = {}
 
+if "ingested_pdfs" not in st.session_state:
+    st.session_state.ingested_pdfs = set()
+
 
 def render_sources(sources):
     if not sources:
@@ -100,7 +103,6 @@ with st.sidebar:
         st.session_state.feedback = {}
         st.rerun()
 
-    
     st.caption(
         "Answers are generated strictly from retrieved website content. "
         "If nothing relevant is found, the assistant will say so instead "
@@ -108,9 +110,32 @@ with st.sidebar:
     )
 
 
-# Input
+# Input with PDF upload inside chat bar
 pending = st.session_state.pop("pending", None)
-user_input = st.chat_input("Ask about HBT Technology Services...") or pending
+
+chat = st.chat_input(
+    "Ask about HBT Technology Services...",
+    accept_file=True,
+    file_type=["pdf"],
+)
+
+uploaded_pdf = chat.files[0] if chat and chat.files else None
+user_input = chat.text if chat else None
+
+if uploaded_pdf:
+    if uploaded_pdf.name not in st.session_state.ingested_pdfs:
+        from embeddings.pdf_ingestor import ingest_pdf
+        with st.spinner(f"Processing {uploaded_pdf.name}..."):
+            count = ingest_pdf(uploaded_pdf, uploaded_pdf.name)
+        if count:
+            st.session_state.ingested_pdfs.add(uploaded_pdf.name)
+            st.toast(f"✅ Added {count} chunks from '{uploaded_pdf.name}'")
+        else:
+            st.toast("⚠️ Could not extract text from PDF.")
+    else:
+        st.toast(f"'{uploaded_pdf.name}' already ingested this session.")
+
+user_input = user_input or pending
 
 if user_input:
     st.session_state.messages.append({"role": "user", "content": user_input})
