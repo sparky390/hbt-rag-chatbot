@@ -55,12 +55,12 @@ COPY . .
 
 RUN chown -R appuser:appuser /app /opt/hf-cache
 
-USER appuser
+COPY entrypoint.py /app/entrypoint.py
 
 EXPOSE 8501
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=30s --retries=3 \
     CMD curl -f http://localhost:8501/_stcore/health || exit 1
 
-ENTRYPOINT ["streamlit", "run", "app.py"]
+ENTRYPOINT ["python", "/app/entrypoint.py"]
 CMD ["--server.port=8501", "--server.address=0.0.0.0", "--server.headless=true", "--browser.gatherUsageStats=false"]
