@@ -110,31 +110,32 @@ with st.sidebar:
     )
 
 
-# PDF Upload (above chat input)
-with st.expander("📄 Upload PDF Brochure", expanded=False):
-    uploaded_pdf = st.file_uploader(
-        "Upload a company brochure",
-        type=["pdf"],
-        label_visibility="collapsed",
-    )
-    if uploaded_pdf:
-        if uploaded_pdf.name not in st.session_state.ingested_pdfs:
-            if st.button("Ingest PDF", use_container_width=True):
-                from embeddings.pdf_ingestor import ingest_pdf
-                with st.spinner(f"Processing {uploaded_pdf.name}..."):
-                    count = ingest_pdf(uploaded_pdf, uploaded_pdf.name)
-                if count:
-                    st.session_state.ingested_pdfs.add(uploaded_pdf.name)
-                    st.success(f"✅ Added {count} chunks from '{uploaded_pdf.name}'")
-                else:
-                    st.error("Could not extract text from PDF.")
-        else:
-            st.success(f"✅ '{uploaded_pdf.name}' already ingested this session.")
-
-
-# Input
+# Input with PDF upload inside chat bar
 pending = st.session_state.pop("pending", None)
-user_input = st.chat_input("Ask about HBT Technology Services...") or pending
+
+chat = st.chat_input(
+    "Ask about HBT Technology Services...",
+    accept_file=True,
+    file_type=["pdf"],
+)
+
+uploaded_pdf = chat.files[0] if chat and chat.files else None
+user_input = chat.text if chat else None
+
+if uploaded_pdf:
+    if uploaded_pdf.name not in st.session_state.ingested_pdfs:
+        from embeddings.pdf_ingestor import ingest_pdf
+        with st.spinner(f"Processing {uploaded_pdf.name}..."):
+            count = ingest_pdf(uploaded_pdf, uploaded_pdf.name)
+        if count:
+            st.session_state.ingested_pdfs.add(uploaded_pdf.name)
+            st.toast(f"✅ Added {count} chunks from '{uploaded_pdf.name}'")
+        else:
+            st.toast("⚠️ Could not extract text from PDF.")
+    else:
+        st.toast(f"'{uploaded_pdf.name}' already ingested this session.")
+
+user_input = user_input or pending
 
 if user_input:
     st.session_state.messages.append({"role": "user", "content": user_input})
