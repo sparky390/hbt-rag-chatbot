@@ -404,24 +404,12 @@ The first container run downloaded the `all-MiniLM-L6-v2` model (~90 MB) from Hu
 - The `ui/` folder contains stub helpers referenced in the project structure; all active UI logic lives in `app.py`.
 - Docker volumes (`ollama_data`, `chroma_data`) persist between restarts. Run `docker compose down -v` to wipe them completely.
 
----
-
-## 🌟 Support & Contribution
-
-If you found this project useful:
-- ⭐ Star the repository
-- 🍴 Fork and improve it
-- 🐛 Report issues or suggest features
-
-Contributions are always welcome!
-
----
 
 ## 🔗 Connect With Me
 
 <p align="center">
   <a href="https://github.com/sparky390">GitHub</a> •
-  <a href="https://instagram.com/sparky.fpv">Instagram</a>
+  <a href="https://www.linkedin.com/in/surya-sundars/">Linkedin</a>
 </p>
 
 ---
