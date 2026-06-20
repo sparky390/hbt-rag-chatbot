@@ -63,5 +63,35 @@
         "question": "What about the second one?",
         "answer": "HBT documentation solutions are designed for:\n* ruggedized manuals\n* multilingual documentation\n* digital access for field engineers\n* mobile-friendly content",
         "feedback": "not helpful"
+    },
+    {
+        "question": "Tell me more about the first one.",
+        "answer": "Creating structured, accurate technical documentation aligned with engineering specifications.",
+        "feedback": "helpful"
+    },
+    {
+        "question": "What services does HBT Technology Services offer?",
+        "answer": "HBT Technology Services offers the following services:\n\n*   Tech Documentation\n*   Engineering Services\n*   Automation and Software Solutions\n*   Digital Documentation for Harsh Environments\n*   End-to-end automation and industrial software development services\n*   Comprehensive engineering services supporting the design, development, and validation of complex industrial systems\n*   Industrial equipment requires precise documentation to ensure safe operation, efficient maintenance, and compliance with global standards.\n*   150+ qualified supplier network\n*   Approved Supplier Network\n*   Strong vendor partnerships\n*   Scalable & sustainable manufacturing",
+        "feedback": "helpful"
+    },
+    {
+        "question": "What is Data as a Service at HBT?",
+        "answer": "Unlock the full value of your business data with HBT’s end-to-end data solutions. We help organizations integrate, govern, and transform data into powerful insights that drive faster decisions, operational efficiency, and sustainable growth across the enterprise.",
+        "feedback": "not helpful"
+    },
+    {
+        "question": "What automation solutions does HBT provide?",
+        "answer": "*   Embedded software\n*   Industrial control systems\n*   Validation and automation engineering\n*   Industrial software platforms\n*   Testing automation\n*   Hardware integration",
+        "feedback": "helpful"
+    },
+    {
+        "question": "What is strategic sourcing at HBT?",
+        "answer": "*   Cost localization initiatives\n*   Supplier capability assessment\n*   Engineering collaboration for manufacturability\n*   End-to-end procurement execution\n*   Supplier identification --> final delivery ownership\n*   Cost Localization Strategy & Process\n*   End-to-End Supply Chain Management",
+        "feedback": "helpful"
+    },
+    {
+        "question": "What does HBT do for technical documentation?",
+        "answer": "*   Technical documentation\n*   Digital Documentation for Harsh Environments\n*   Transformation of complex engineering information into clear, structured technical publications designed for multiple stakeholders including operators, service technicians, dealers, and product support teams.",
+        "feedback": "helpful"
     }
 ]
