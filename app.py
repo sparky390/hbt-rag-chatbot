@@ -100,7 +100,7 @@ with st.sidebar:
         st.session_state.feedback = {}
         st.rerun()
 
-    st.divider()
+    
     st.caption(
         "Answers are generated strictly from retrieved website content. "
         "If nothing relevant is found, the assistant will say so instead "

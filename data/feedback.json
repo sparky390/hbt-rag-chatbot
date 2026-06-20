@@ -1,99 +1,17 @@
-import json
-import os
-import streamlit as st
-from rag.chatbot import ask_question
-
-st.set_page_config(
-    page_title="HBT AI Knowledge Assistant",
-    page_icon="🤖",
-    layout="centered",
-)
-
-st.title("🤖 HBT AI Knowledge Assistant")
-st.caption("Answers grounded in HBT Technology Services website content.")
-
-FEEDBACK_FILE = "data/feedback.json"
-
-
-def save_feedback(question: str, answer: str, rating: str):
-    os.makedirs("data", exist_ok=True)
-    existing = []
-    if os.path.exists(FEEDBACK_FILE):
-        with open(FEEDBACK_FILE, "r", encoding="utf-8") as f:
-            existing = json.load(f)
-    existing.append({
-        "question": question,
-        "answer": answer,
-        "feedback": rating,
-    })
-    with open(FEEDBACK_FILE, "w", encoding="utf-8") as f:
-        json.dump(existing, f, indent=4, ensure_ascii=False)
-
-
-if "messages" not in st.session_state:
-    st.session_state.messages = []
-
-if "feedback" not in st.session_state:
-    st.session_state.feedback = {}
-
-# Render previous messages
-for i, msg in enumerate(st.session_state.messages):
-    with st.chat_message(msg["role"]):
-        st.write(msg["content"])
-
-    if msg["role"] == "assistant":
-        # Find the question that triggered this answer
-        question = ""
-        if i > 0 and st.session_state.messages[i - 1]["role"] == "user":
-            question = st.session_state.messages[i - 1]["content"]
-
-        col1, col2, col3 = st.columns([1, 1, 8])
-        with col1:
-            if st.button("👍", key=f"up_{i}"):
-                st.session_state.feedback[i] = "helpful"
-                save_feedback(question, msg["content"], "helpful")
-        with col2:
-            if st.button("👎", key=f"dn_{i}"):
-                st.session_state.feedback[i] = "not helpful"
-                save_feedback(question, msg["content"], "not helpful")
-
-        if i in st.session_state.feedback:
-            st.caption(f"Marked as: {st.session_state.feedback[i]}")
-
-# Sidebar
-with st.sidebar:
-    st.header("Sample Questions")
-    samples = [
-        "What services does HBT Technology Services offer?",
-        "What is Data as a Service at HBT?",
-        "What automation solutions does HBT provide?",
-        "What is HBT's engineering services capability?",
-        "What does HBT do for technical documentation?",
-        "What is strategic sourcing at HBT?",
-    ]
-    for q in samples:
-        if st.button(q, use_container_width=True):
-            st.session_state["pending"] = q
-
-    st.divider()
-    if st.button("🗑️ Clear Chat", use_container_width=True):
-        st.session_state.messages = []
-        st.session_state.feedback = {}
-        st.rerun()
-
-# Input
-pending = st.session_state.pop("pending", None)
-user_input = st.chat_input("Ask about HBT Technology Services...") or pending
-
-if user_input:
-    st.session_state.messages.append({"role": "user", "content": user_input})
-    with st.chat_message("user"):
-        st.write(user_input)
-
-    with st.chat_message("assistant"):
-        with st.spinner("Searching knowledge base..."):
-            answer = ask_question(user_input)
-        st.write(answer)
-
-    st.session_state.messages.append({"role": "assistant", "content": answer})
-    st.rerun()
+[
+    {
+        "question": "What services does HBT Technology Services offer?",
+        "answer": "*   Tech Documentation\n*   Engineering Services\n*   Automation and Software Solutions\n*   Digital Documentation for Harsh Environments\n*   Embedded software\n*   Industrial control systems\n*   Validation and automation engineering\n*   Mechanical engineering\n*   Hydraulics\n*   Gearbox design\n*   Electrical systems\n*   System integration\n*   Virtual validation\n*   Testing automation\n*   Hardware integration\n*   Supplier Eco System (150+ qualified supplier network, Approved Supplier Network, Strong vendor partnerships, Scalable & sustainable manufacturing)",
+        "feedback": "helpful"
+    },
+    {
+        "question": "What services does HBT Technology Services offer?",
+        "answer": "*   Tech Documentation\n*   Engineering Services\n*   Automation and Software Solutions\n*   Digital Documentation for Harsh Environments\n*   Embedded software\n*   Industrial control systems\n*   Validation and automation engineering\n*   Mechanical engineering\n*   Hydraulics\n*   Gearbox design\n*   Electrical systems\n*   System integration\n*   Virtual validation\n*   Testing automation\n*   Hardware integration\n*   Supplier Eco System (150+ qualified supplier network, Approved Supplier Network, Strong vendor partnerships, Scalable & sustainable manufacturing)",
+        "feedback": "not helpful"
+    },
+    {
+        "question": "What services does HBT Technology Services offer?",
+        "answer": "*   Tech Documentation\n*   Engineering Services\n*   Automation and Software Solutions\n*   Digital Documentation for Harsh Environments\n*   Embedded software\n*   Industrial control systems\n*   Validation and automation engineering\n*   Mechanical engineering\n*   Hydraulics\n*   Gearbox design\n*   Electrical systems\n*   System integration\n*   Virtual validation\n*   Testing automation\n*   Hardware integration\n*   Supplier Eco System (150+ qualified supplier network, Approved Supplier Network, Strong vendor partnerships, Scalable & sustainable manufacturing)",
+        "feedback": "helpful"
+    }
+]
